@@ -81,10 +81,10 @@ export default function AboutPage() {
             powers many of the world’s largest independent labels. He sold his
             share in 2018 but still uses it as the backbone for his guest
             lectures and his thriving label management business. His latest
-            project, in partnership with Rob “Activa” Stevenson is the
-            innovative vinyl manufacturing platform “The Record Republic", a
-            game changer in the world of record manufacturing. For more
-            information please contact me here.
+            project, in partnership with Rob `&quot;`Activa`&quot;` Stevenson is
+            the innovative vinyl manufacturing platform `&quot;`The Record
+            Republic`&quot;`, a game changer in the world of record
+            manufacturing. For more information please contact me here.
           </p>
         </main>
       </Container>
