@@ -1,6 +1,23 @@
 .about {
+  display: flex;
+  flex-direction: column;
 }
 
-h2 {
-  font-size: 40px;
+.about-p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  padding-bottom: 50px;
+  max-width: 60ch;
+  text-shadow: 2px 2px 8px black;
+  color: white;
+}
+
+.about-h1 {
+  font-size: 0;
+  color: white;
+}
+
+.about-h2 {
+  color: white;
 }

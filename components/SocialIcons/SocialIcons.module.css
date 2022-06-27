@@ -1,0 +1,15 @@
+.social-icons {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 100px;
+}
+
+.icon {
+  color: white;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  color: red;
+  transition: 0.5s;
+}

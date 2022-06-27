@@ -1,6 +1,8 @@
 import Head from "next/head";
 import css from "../styles/Home.module.css";
 import { ThemeProvider, Container } from "react-bootstrap";
+import SocialIcons from "../components/SocialIcons/SocialIcons";
+import TopNav from "../components/TopNav/TopNav";
 
 export default function Home() {
   return (
@@ -14,13 +16,13 @@ export default function Home() {
           <link rel="icon" href="/favicon.png" />
         </Head>
 
-        <main className={css.test}>
-          <h1>Chris Hampshire</h1>
-          <p>
+        <main className={css["home"]}>
+          <div className={css["home-p"]}>
             Producer, DJ, Label Owner and Manager, Publisher, Mentor and Music
             Industry Entrepreneur For over thirty years Chris Hampshire has been
             involved in the music industry.
-          </p>
+          </div>
+          <SocialIcons />
         </main>
       </Container>
     </ThemeProvider>
