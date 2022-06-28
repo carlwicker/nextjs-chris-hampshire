@@ -1,22 +1,20 @@
 import Head from "next/head";
 import Link from "next/link";
 import css from "./About.module.css";
-import { ThemeProvider, Container } from "react-bootstrap";
 import SocialIcons from "../../components/SocialIcons/SocialIcons";
+import { Container } from "react-bootstrap";
 
 export default function AboutPage() {
   return (
-    <ThemeProvider
-      breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
-    >
-      <Container>
-        <Head>
-          <title>Chris Hampshire: About</title>
-          <meta name="description" content="Chris Hampshire About Page" />
-          <link rel="icon" href="/favicon.png" />
-        </Head>
+    <>
+      <Head>
+        <title>Chris Hampshire: About</title>
+        <meta name="description" content="Chris Hampshire About Page" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
 
-        <main className={css.test}>
+      <Container>
+        <main className={css.about}>
           <div className={css["about-h1"]}>About</div>
           <h2 className={css["about-h2"]}>Producer</h2>
           <p className={css["about-p"]}>
@@ -144,6 +142,6 @@ export default function AboutPage() {
           <SocialIcons />
         </main>
       </Container>
-    </ThemeProvider>
+    </>
   );
 }
