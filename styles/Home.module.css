@@ -10,7 +10,7 @@
 .home {
   display: flex;
   flex-direction: column;
-  animation: fadeIn 5s;
+  animation: fadeIn 1s;
 }
 
 .home-p {
@@ -20,6 +20,5 @@
   padding-top: 30vh;
   padding-bottom: 50px;
   max-width: 60ch;
-  text-shadow: 2px 2px 8px black;
   color: white;
 }

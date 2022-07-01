@@ -80,8 +80,12 @@ export default function AboutPage() {
             </Link>{" "}
             in 2001, Chris formed a relationship which would ultimately see him
             acquire the company in 2004. He now presides over a suite of labels
-            under the Recoverworld banner and has helped launch the careers of
-            John O’Callaghan, John Askew,{" "}
+            under the{" "}
+            <Link href="https://recoverworld.com" target="_blank">
+              RecoverWorld
+            </Link>{" "}
+            banner and has helped launch the careers of John O’Callaghan, John
+            Askew,{" "}
             <Link href="http://www.seantyasmusic.com" target="_blank">
               Sean Tyas
             </Link>
@@ -98,14 +102,21 @@ export default function AboutPage() {
           <h2 className={css["about-h2"]}>Label Management</h2>
           <p className={css["about-p"]}>
             Based on the success of his own labels and encyclopedic knowledge of
-            the industry, Recoverworld offer an end to end label management
-            solution including royalty accounting, manufacturing and sales and
-            distribution.
+            the industry,{" "}
+            <Link href="https://recoverworld.com" target="_blank">
+              RecoverWorld
+            </Link>{" "}
+            offer an end to end label management solution including royalty
+            accounting, manufacturing and sales and distribution.
           </p>
           <h2 className={css["about-h2"]}>Publishing</h2>
           <p className={css["about-p"]}>
-            Supreme Music Publishing, the publishing side of RecoverWorld are
-            proud to represent a catalogue in excess of 3000 songs worldwide.
+            Supreme Music Publishing, the publishing side of{" "}
+            <Link href="https://recoverworld.com" target="_blank">
+              RecoverWorld
+            </Link>{" "}
+            are proud to represent a catalogue in excess of 3000 songs
+            worldwide.
           </p>
           <h2 className={css["about-h2"]}>Mentor</h2>
           <p className={css["about-p"]}>

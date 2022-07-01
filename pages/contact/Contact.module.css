@@ -1,6 +1,7 @@
 .contact {
   display: flex;
   flex-direction: column;
+  width: 60ch;
 }
 
 .contact-p {
@@ -19,5 +20,9 @@
 }
 
 .contact-h2 {
+  color: white;
+}
+
+.label {
   color: white;
 }

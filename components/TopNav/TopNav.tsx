@@ -5,16 +5,12 @@ export default function TopNav() {
   return (
     <>
       <Navbar variant="dark" expand="lg">
-        <Link href="./" passHref>
-          <Nav.Link>
-            <Navbar.Brand>Chris Hampshire</Navbar.Brand>
-          </Nav.Link>
-        </Link>
+        <Navbar.Brand>Chris Hampshire</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link href="./" passHref>
+            <Link href="/" passHref>
               <Nav.Link>Home</Nav.Link>
             </Link>
             <Link href="/about" passHref>
