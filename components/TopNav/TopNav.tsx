@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function TopNav() {
   return (
     <>
-      <Navbar variant="dark" expand="lg">
+      <Navbar variant="dark" expand="lg" collapseOnSelect={true}>
         <Navbar.Brand>Chris Hampshire</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

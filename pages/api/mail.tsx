@@ -2,7 +2,6 @@ import sgMail from "@sendgrid/mail";
 
 export default (req: any, res: any) => {
   const body = JSON.parse(req.body);
-  console.log(body);
 
   sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY as string);
   const msg = {
