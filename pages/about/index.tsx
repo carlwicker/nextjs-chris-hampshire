@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import css from "./About.module.css";
 import SocialIcons from "../../components/SocialIcons/SocialIcons";
-import { Container } from "react-bootstrap";
 
 export default function AboutPage() {
   return (
@@ -13,7 +12,7 @@ export default function AboutPage() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <Container>
+      <div>
         <main className={css.about}>
           <div className={css["about-h1"]}>About</div>
           <h2 className={css["about-h2"]}>Producer</h2>
@@ -152,7 +151,7 @@ export default function AboutPage() {
           </p>
           <SocialIcons />
         </main>
-      </Container>
+      </div>
     </>
   );
 }

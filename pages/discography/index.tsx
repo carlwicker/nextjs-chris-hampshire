@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import { Container } from "react-bootstrap";
 import css from "./Discography.module.css";
 import SocialIcons from "../../components/SocialIcons/SocialIcons";
 
@@ -13,7 +12,7 @@ export default function DiscographyPage() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <Container>
+      <div>
         <main className={css.discography}>
           <h1 className={css["discography-h1"]}>Discography</h1>
 
@@ -26,7 +25,7 @@ export default function DiscographyPage() {
                 href="https://www.beatport.com/release/scream-2-b-heard/3757814"
                 target="_blank"
               >
-                <a>Beatport</a>
+                Beatport
               </Link>
             </div>
           </div>
@@ -42,7 +41,7 @@ export default function DiscographyPage() {
                 href="https://www.beatport.com/release/futuristic-feat-shane-54/3407976"
                 target="_blank"
               >
-                <a>Beatport</a>
+                Beatport
               </Link>
             </div>
           </div>
@@ -58,7 +57,7 @@ export default function DiscographyPage() {
                 href="https://www.beatport.com/release/twenty-five-years-chris-hampshire-remix/3223531"
                 target="_blank"
               >
-                <a>Beatport</a>
+                Beatport
               </Link>
             </div>
           </div>
@@ -74,7 +73,7 @@ export default function DiscographyPage() {
                 href="https://www.beatport.com/release/the-vault/2992047"
                 target="_blank"
               >
-                <a>Beatport</a>
+                Beatport
               </Link>
             </div>
           </div>
@@ -88,7 +87,7 @@ export default function DiscographyPage() {
                 href="https://www.beatport.com/release/ninety-four/1083500"
                 target="_blank"
               >
-                <a>Beatport</a>
+                Beatport
               </Link>
             </div>
           </div>
@@ -105,13 +104,13 @@ export default function DiscographyPage() {
                 href="https://www.beatport.com/release/breathless/182256"
                 target="_blank"
               >
-                <a>Beatport</a>
+                Beatport
               </Link>
             </div>
           </div>
           <SocialIcons />
         </main>
-      </Container>
+      </div>
     </>
   );
 }

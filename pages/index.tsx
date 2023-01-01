@@ -1,6 +1,5 @@
 import Head from "next/head";
 import css from "../styles/Home.module.css";
-import { Container } from "react-bootstrap";
 import SocialIcons from "../components/SocialIcons/SocialIcons";
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <Container>
+      <div>
         <main className={css["home"]}>
           <div className={css["home-p"]}>
             Producer, DJ, Label Owner and Manager, Publisher, Mentor and Music
@@ -21,7 +20,7 @@ export default function Home() {
           </div>
           <SocialIcons />
         </main>
-      </Container>
+      </div>
     </>
   );
 }

@@ -1,30 +1,23 @@
-import { Navbar, Nav } from "react-bootstrap";
 import Link from "next/link";
+import css from "./TopNav.module.css";
 
 export default function TopNav() {
   return (
-    <>
-      <Navbar variant="dark" expand="lg" collapseOnSelect={true}>
-        <Navbar.Brand>Chris Hampshire</Navbar.Brand>
+    <div className="absolute flex gap-10 z-50 p-5 bg-black">
+      <div>
+        <Link href="/">Chris Hampshire</Link>
+      </div>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Link href="/" passHref>
-              <Nav.Link>Home</Nav.Link>
-            </Link>
-            <Link href="/about" passHref>
-              <Nav.Link>About</Nav.Link>
-            </Link>
-            <Link href="/discography" passHref>
-              <Nav.Link>Discography</Nav.Link>
-            </Link>
-            <Link href="/contact" passHref>
-              <Nav.Link>Contact</Nav.Link>
-            </Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </>
+      <div>
+        <Link href="/about">About</Link>
+      </div>
+
+      <div>
+        <Link href="/discography">Discography</Link>
+      </div>
+      <div>
+        <Link href="/contact">Contact</Link>
+      </div>
+    </div>
   );
 }

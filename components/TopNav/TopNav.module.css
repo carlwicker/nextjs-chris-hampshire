@@ -1,0 +1,20 @@
+.top-nav {
+}
+
+.brand-link {
+  color: white;
+  text-decoration: none !important;
+}
+
+.brand-link:visited {
+  color: white;
+}
+
+.brand-link:active {
+  color: white;
+}
+
+a .brand-link {
+  color: white;
+  background-color: red;
+}
