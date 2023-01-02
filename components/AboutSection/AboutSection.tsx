@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section>
+    <section id="about">
       <div className="container mx-auto p-5 w-full gap-10 text-2xl py-20">
         <h2
           data-scroll
           data-scroll-speed="1.5"
-          className="text-9xl font-semibold uppercase border-b-[1px] border-white py-10"
+          className="text-9xl font-semibold uppercase border-b-[1px] border-white py-10 z-50 relative"
         >
           Producer
         </h2>
