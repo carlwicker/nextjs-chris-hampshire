@@ -5,7 +5,7 @@ import SocialIcons from "../../components/SocialIcons/SocialIcons";
 
 export default function DiscographyPage() {
   return (
-    <>
+    <section>
       <Head>
         <title>Chris Hampshire: Discography</title>
         <meta name="description" content="Chris Hampshire Discography Page" />
@@ -111,6 +111,6 @@ export default function DiscographyPage() {
           <SocialIcons />
         </main>
       </div>
-    </>
+    </section>
   );
 }

@@ -23,7 +23,7 @@ export default function ContactPage(props: any) {
   }
 
   return (
-    <>
+    <div data-scroll-section>
       <Head>
         <title>Chris Hampshire: Contact</title>
         <meta name="description" content="Chris Hampshire Contact Page" />
@@ -44,6 +44,6 @@ export default function ContactPage(props: any) {
           </form>
         </main>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,22 +1,24 @@
 import Link from "next/link";
-import css from "./TopNav.module.css";
 
 export default function TopNav() {
   return (
-    <div className="absolute flex gap-10 z-50 p-5 bg-black">
-      <div>
-        <Link href="/">Chris Hampshire</Link>
-      </div>
+    <div className="p-5 absolute flex z-50 container mx-auto font-semibold uppercase text-sm">
+      <div className="flex justify-between w-full">
+        <div className="bg-black p-2">
+          <Link href="/">Chris Hampshire</Link>
+        </div>
 
-      <div>
-        <Link href="/about">About</Link>
-      </div>
-
-      <div>
-        <Link href="/discography">Discography</Link>
-      </div>
-      <div>
-        <Link href="/contact">Contact</Link>
+        <nav className="flex gap-2">
+          <div className="bg-black p-2">
+            <Link href="/about">About</Link>
+          </div>
+          <div className="bg-black p-2">
+            <Link href="/discography">Discography</Link>
+          </div>
+          <div className="bg-black p-2 ">
+            <Link href="/contact">Contact</Link>
+          </div>
+        </nav>
       </div>
     </div>
   );

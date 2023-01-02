@@ -16,10 +16,13 @@
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.8",
     "firebase": "^9.8.3",
+    "framer-motion": "^8.0.2",
+    "locomotive-scroll": "^4.1.4",
     "next": "^13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "react-locomotive-scroll": "^0.2.2"
   },
   "devDependencies": {
     "@types/node": "18.0.0",
