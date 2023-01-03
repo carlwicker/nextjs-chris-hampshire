@@ -30,7 +30,7 @@ a:hover {
 
 a {
   /* text-decoration: underline; */
-  background-color: black;
+  background-color: unset;
   padding: 3px;
   color: white;
   font-weight: 600;

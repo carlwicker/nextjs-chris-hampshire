@@ -22,7 +22,7 @@ export default function AnimatedSvg() {
 
   return (
     <svg
-      className="w-full absolute z-0 left:0 top-0 min-h-screen"
+      className="absolute z-0 left:0 top-0 h-[100vh]"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1920 1080"
       fill="black"
