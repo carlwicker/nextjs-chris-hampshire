@@ -1,3 +1,3 @@
-Chris Hampshire Microsite (NextJs, React Bootstrap, Sendgrid API)
+Chris Hampshire Microsite (NextJs)
 
-https://chrishampshire.co.uk
+Work In Progress
