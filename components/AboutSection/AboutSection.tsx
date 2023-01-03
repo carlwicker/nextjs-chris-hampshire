@@ -6,16 +6,12 @@ export default function AboutSection() {
       <div className="container mx-auto p-5 w-full gap-10 text-2xl py-20">
         <h2
           data-scroll
-          data-scroll-speed="1.5"
-          className="text-9xl font-semibold uppercase border-b-[1px] border-white py-10 z-50 relative"
+          data-scroll-speed="2"
+          className="lg:text-7xl  font-semibold uppercase border-b-[1px] border-white py-10 z-50 relative"
         >
           Producer
         </h2>
-        <p
-          data-scroll
-          data-scroll-speed="3"
-          className="w-full xl:w-1/2 pb-20 py-10"
-        >
+        <p data-scroll data-scroll-speed="3" className="w-full xl:w-1/2 pb-20">
           He has sold over 100,000 vinyl units and had well over 100 commercial
           releases. He is one of only a small group of producers with genuine
           cross genre appeal with successful projects in house, progressive,
@@ -53,16 +49,12 @@ export default function AboutSection() {
 
         <h2
           data-scroll
-          data-scroll-speed="1.5"
-          className="text-9xl font-semibold uppercase border-b-[1px] border-white py-10"
+          data-scroll-speed="2"
+          className="lg:text-7xl  font-semibold uppercase border-b-[1px] border-white py-10"
         >
           Dj
         </h2>
-        <p
-          data-scroll
-          data-scroll-speed="3"
-          className="w-full xl:w-1/2 pb-20 py-10"
-        >
+        <p data-scroll data-scroll-speed="3" className="w-full xl:w-1/2 pb-20">
           As a DJ, his career has mirrored that of his productions - eclectic
           and always one step ahead of the game. With over 20 years behind the
           decks, he has played as far afield as Japan, South Africa and
@@ -76,16 +68,12 @@ export default function AboutSection() {
         </p>
         <h2
           data-scroll
-          data-scroll-speed="1.5"
-          className="text-9xl font-semibold uppercase border-b-[1px] border-white py-10"
+          data-scroll-speed="2"
+          className="lg:text-7xl  font-semibold uppercase border-b-[1px] border-white py-10"
         >
           Label Owner
         </h2>
-        <p
-          data-scroll
-          data-scroll-speed="3"
-          className="w-full xl:w-1/2 pb-20 py-10"
-        >
+        <p data-scroll data-scroll-speed="3" className="w-full xl:w-1/2 pb-20">
           Interflow Sounds, his first label, went from being a small imprint set
           up as primarily a vehicle for his own productions, to one of the UK’s
           leading independent hard dance/trance labels. In 2002 he closed that
@@ -121,16 +109,12 @@ export default function AboutSection() {
 
         <h2
           data-scroll
-          data-scroll-speed="1.5"
-          className="text-9xl font-semibold uppercase border-b-[1px] border-white py-10"
+          data-scroll-speed="2"
+          className="lg:text-7xl  font-semibold uppercase border-b-[1px] border-white py-10"
         >
           Label Management
         </h2>
-        <p
-          data-scroll
-          data-scroll-speed="3"
-          className="w-full xl:w-1/2 pb-20 py-10"
-        >
+        <p data-scroll data-scroll-speed="3" className="w-full xl:w-1/2 pb-20">
           Based on the success of his own labels and encyclopedic knowledge of
           the industry,{" "}
           <Link href="https://recoverworld.com" target="_blank">
@@ -142,16 +126,12 @@ export default function AboutSection() {
 
         <h2
           data-scroll
-          data-scroll-speed="1.5"
-          className="text-9xl font-semibold uppercase border-b-[1px] border-white py-10"
+          data-scroll-speed="2"
+          className="lg:text-7xl  font-semibold uppercase border-b-[1px] border-white py-10"
         >
           Publishing
         </h2>
-        <p
-          data-scroll
-          data-scroll-speed="3"
-          className="w-full xl:w-1/2 pb-20 py-10"
-        >
+        <p data-scroll data-scroll-speed="3" className="w-full xl:w-1/2 pb-20">
           Supreme Music Publishing, the publishing side of{" "}
           <Link href="https://recoverworld.com" target="_blank">
             RecoverWorld
@@ -161,16 +141,12 @@ export default function AboutSection() {
 
         <h2
           data-scroll
-          data-scroll-speed="1.5"
-          className="text-9xl font-semibold uppercase border-b-[1px] border-white py-10"
+          data-scroll-speed="2"
+          className="lg:text-7xl  font-semibold uppercase border-b-[1px] border-white py-10"
         >
           Mentor
         </h2>
-        <p
-          data-scroll
-          data-scroll-speed="3"
-          className="w-full xl:w-1/2 pb-20 py-10"
-        >
+        <p data-scroll data-scroll-speed="3" className="w-full xl:w-1/2 pb-20">
           Mentor for the UK government backed scheme “New Deal for Musicians”,
           guest lecturer at the{" "}
           <Link href="https://www.bimm.ac.uk" target="_blank">
@@ -182,16 +158,12 @@ export default function AboutSection() {
 
         <h2
           data-scroll
-          data-scroll-speed="1.5"
-          className="text-9xl font-semibold uppercase border-b-[1px] border-white py-10"
+          data-scroll-speed="2"
+          className="lg:text-7xl  font-semibold uppercase border-b-[1px] border-white py-10"
         >
           Business Solutions
         </h2>
-        <p
-          data-scroll
-          data-scroll-speed="3"
-          className="w-full xl:w-1/2 pb-20 py-10"
-        >
+        <p data-scroll data-scroll-speed="3" className="w-full xl:w-1/2 pb-20">
           With the rise of digital media, he was one of the original directors
           of{" "}
           <Link href="https://www.ampsuite.com" target="_blank">
