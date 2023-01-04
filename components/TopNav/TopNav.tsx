@@ -15,9 +15,9 @@ export default function TopNav() {
           <div className="bg-black p-2">
             <Link href="/discography">Discography</Link>
           </div>
-          <div className="bg-black p-2 ">
+          {/* <div className="bg-black p-2 ">
             <Link href="/contact">Contact</Link>
-          </div>
+          </div> */}
         </nav>
       </div>
     </div>

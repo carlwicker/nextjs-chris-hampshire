@@ -20,7 +20,7 @@ interface ILinks {
 
 export default function DiscographySection({ releases }: IDiscographySection) {
   return (
-    <div className="container mx-auto p-5 w-full text-xl font-normal py-40">
+    <div className="container mx-auto w-full text-xl font-normal py-40">
       <h1
         data-scroll
         data-scroll-speed="2"
