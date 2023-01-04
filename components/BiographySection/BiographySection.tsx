@@ -1,13 +1,9 @@
-//useSWR allows the use of SWR inside function components
 import useSWR from "swr";
-
 import BiographyItem from "./BiographyItem";
 
 export default function BiographySection() {
   const fetcher = (url: any) => fetch(url).then((res) => res.json());
   const { data, error } = useSWR("/api/biography", fetcher);
-
-  const jsonData = data && JSON.parse(data);
 
   return (
     <div className="container mx-auto w-full text-xl font-normal py-40">
@@ -20,9 +16,9 @@ export default function BiographySection() {
       </h1>
 
       <div>
-        {jsonData?.biography?.map((section: any, index: any) => {
-          return <BiographyItem section={section} index={index} key={index} />;
-        })}
+        {data?.biography?.map((section: any, index: any) => (
+          <BiographyItem section={section} index={index} key={index} />
+        ))}
       </div>
     </div>
   );
