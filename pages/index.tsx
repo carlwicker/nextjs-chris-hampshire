@@ -8,7 +8,7 @@ import BiographySection from "../components/BiographySection/BiographySection";
 
 export default function Home() {
   return (
-    <div className="bg-black p-5">
+    <div>
       <HeroSection />
       <ChrisImage />
       <BiographySection data={data} />

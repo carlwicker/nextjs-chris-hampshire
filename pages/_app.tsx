@@ -38,7 +38,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         containerRef={containerRef}
       >
         <div data-scroll-container ref={containerRef}>
-          <Component {...pageProps} />
+          <div className="p-5">
+            <Component {...pageProps} />
+          </div>
           <FooterSection />
         </div>
       </LocomotiveScrollProvider>

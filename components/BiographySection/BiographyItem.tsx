@@ -1,7 +1,7 @@
 export default function BiographyItem({ section, index }: any) {
   return (
     <div
-      className={`flex flex-col gap-1 ${
+      className={`flex flex-col ${
         index === 6 ? "border-b-[0px]" : "border-b-[1px]"
       } border-b-[1px] border-[#333] py-20`}
     >
@@ -11,7 +11,7 @@ export default function BiographyItem({ section, index }: any) {
       <p
         data-scroll
         data-scroll-speed="1"
-        className="w-full xl:w-1/2 pb-20 font-thin "
+        className="w-full xl:w-1/2 pb-20 font-normal "
       >
         {section.content}
       </p>

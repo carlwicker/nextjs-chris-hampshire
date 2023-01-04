@@ -33,8 +33,8 @@ export default function ReleaseItem({ release, index }: IRelease) {
 
         <h2 className="font-medium text-4xl">{release.title}</h2>
 
-        <div className="font-thin">{release.artist}</div>
-
+        <div className="">{release.artist}</div>
+        <br />
         <Link
           href={release?.links.beatport}
           target="_blank"
