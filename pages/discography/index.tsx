@@ -1,9 +1,7 @@
 import Head from "next/head";
-
 import releases from "../api/releases.json";
 import DiscographySection from "../../components/DiscographySection.tsx/DiscographySection";
 import Test from "../../components/Test";
-import FooterSection from "../../components/Footer/FooterSection";
 
 export default function DiscographyPage() {
   return (
@@ -15,7 +13,6 @@ export default function DiscographyPage() {
       </Head>
       <Test />
       <DiscographySection releases={releases} />
-      <FooterSection />
     </section>
   );
 }

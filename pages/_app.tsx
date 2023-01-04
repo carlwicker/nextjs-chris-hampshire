@@ -5,6 +5,7 @@ import TopNav from "../components/TopNav/TopNav";
 import { useRef } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import FooterSection from "../components/Footer/FooterSection";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();
@@ -27,9 +28,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <LocomotiveScrollProvider
         options={{
           smooth: true,
-          mobile: { smooth: true, inertia: 0.8 },
-          tablet: { smooth: true, inertia: 0.8 },
-          smartphone: { smooth: true, inertia: 0.8 },
+          inertia: 0.5,
+          mobile: { smooth: true },
+          tablet: { smooth: true },
+          smartphone: { smooth: true },
         }}
         watch={[]}
         location={asPath}
@@ -37,6 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         <div data-scroll-container ref={containerRef}>
           <Component {...pageProps} />
+          <FooterSection />
         </div>
       </LocomotiveScrollProvider>
     </>

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import BiographySection from "../../components/BiographySection/BiographySection";
-import FooterSection from "../../components/Footer/FooterSection";
 import Test from "../../components/Test";
 
 import data from "../api/biography.json";
@@ -17,7 +16,6 @@ export default function AboutPage() {
       <Test />
 
       <BiographySection data={data} />
-      <FooterSection />
     </div>
   );
 }
