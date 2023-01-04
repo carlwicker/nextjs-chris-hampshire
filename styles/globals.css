@@ -20,22 +20,9 @@ body {
 }
 
 a:hover {
-  /* text-decoration: underline; */
-  background-color: white;
-  color: black;
-  font-weight: 600;
-  transition-duration: 0.25s;
-  transition-timing-function: linear;
 }
 
 a {
-  /* text-decoration: underline; */
-  background-color: unset;
-  padding: 3px;
-  color: white;
-  font-weight: 600;
-  transition-duration: 0.25s;
-  transition-timing-function: linear;
 }
 
 h2 {

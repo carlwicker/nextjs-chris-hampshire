@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta charSet="utf-8" />
       </Head>
 
-      <div className="container mx-auto">
+      <div className="flex absolute top-0 self-center justify-center w-full">
         <TopNav />
       </div>
 
