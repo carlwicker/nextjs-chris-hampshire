@@ -2,9 +2,7 @@ import Head from "next/head";
 import BiographySection from "../../components/BiographySection/BiographySection";
 import Test from "../../components/Test";
 
-import data from "../api/biography.json";
-
-export default function AboutPage() {
+export default function BiographyPage() {
   return (
     <div>
       <Head>
@@ -15,7 +13,7 @@ export default function AboutPage() {
 
       <Test />
 
-      <BiographySection data={data} />
+      <BiographySection />
     </div>
   );
 }

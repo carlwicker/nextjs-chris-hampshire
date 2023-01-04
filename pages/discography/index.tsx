@@ -1,5 +1,5 @@
 import Head from "next/head";
-import releases from "../api/releases.json";
+import releases from "../../json/releases.json";
 import DiscographySection from "../../components/DiscographySection.tsx/DiscographySection";
 import Test from "../../components/Test";
 
