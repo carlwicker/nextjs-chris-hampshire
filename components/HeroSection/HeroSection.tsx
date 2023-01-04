@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <div className="overflow-hidden">
       <section className="flex w-full min-h-screen z-20">
-        <div className="flex flex-col gap-10 self-center container mx-auto px-5">
+        <div className="flex flex-col gap-10 self-center container mx-auto">
           <div
             data-scroll
             data-scroll-speed="2"

@@ -27,9 +27,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <LocomotiveScrollProvider
         options={{
           smooth: true,
-          mobile: { smooth: true },
-          tablet: { smooth: true },
-          smartphone: { smooth: true },
+          mobile: { smooth: true, inertia: 0.8 },
+          tablet: { smooth: true, inertia: 0.8 },
+          smartphone: { smooth: true, inertia: 0.8 },
         }}
         watch={[]}
         location={asPath}
