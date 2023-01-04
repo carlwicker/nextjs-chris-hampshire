@@ -6,7 +6,7 @@ export default function BackgroundImage() {
       <div
         data-scroll
         data-scroll-speed="-0.10"
-        className="flex mx-auto w-full xl:h-[800px] lg:h-[600px] md:h-[450px] h-[350px] mb-40"
+        className="flex mx-auto container w-full xl:h-[800px] lg:h-[600px] md:h-[450px] h-[350px] mb-40"
       >
         <Image
           src="/images/chris_banner_mid.webp"

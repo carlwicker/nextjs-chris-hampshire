@@ -14,7 +14,11 @@ export default function ReleaseItem({ release, index }: IRelease) {
     >
       <div data-scroll data-scroll-speed="2">
         <div className="text-sm">
-          <a href={release?.links.recoverworldCatLink} target="_blank">
+          <a
+            href={release?.links.recoverworldCatLink}
+            target="_blank"
+            rel="noreferrer"
+          >
             {release.catNum}
           </a>{" "}
           | <a href={release?.links.recoverWorldLabelLink}>{release.label}</a>

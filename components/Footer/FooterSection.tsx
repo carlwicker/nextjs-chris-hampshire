@@ -10,6 +10,7 @@ export default function FooterSection() {
           <a
             href="mailto:chris@recoverworld.com"
             target="_blank"
+            rel="noreferrer"
             className="text-white font-bold bg-transparent hover:bg-white hover:text-black w-min"
           >
             chris@recoverworld.com
@@ -20,6 +21,7 @@ export default function FooterSection() {
           <a
             href="http://www.recoverworld.com"
             target="_blank"
+            rel="noreferrer"
             className="text-white font-bold bg-transparent hover:bg-white hover:text-black w-min"
           >
             http://www.recoverworld.com
@@ -28,6 +30,7 @@ export default function FooterSection() {
           <a
             href="http://www.facebook.com/recoverworld"
             target="_blank"
+            rel="noreferrer"
             className="text-white font-bold bg-transparent hover:bg-white hover:text-black w-min"
           >
             http://www.facebook.com/recoverworld
