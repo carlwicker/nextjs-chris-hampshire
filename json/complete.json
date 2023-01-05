@@ -1,0 +1,104 @@
+[
+  {
+    "biography": [
+      {
+        "title": "Producer",
+        "content": "He has sold over 100,000 vinyl units and had well over 100 commercial releases. He is one of only a small group of producers with genuine cross genre appeal with successful projects in house, progressive, techno, hard dance and trance. Many of these were produced in his own studio including the 1996 release “Breathless” which, helped by a classic remix by Tony De Vit, went on to sell over 40,000 vinyl units. As an artist he has an impressive discography including remixes by and for Tiesto, Sinead O’Conner, Satoshi Tomiie and Tony De Vit. He has also released and licensed original tracks on some of the world’s biggest independent dance imprints including Tommy Boy, Blackhole and Armada Music."
+      },
+      {
+        "title": "Dj",
+        "content": "As a DJ, his career has mirrored that of his productions - eclectic and always one step ahead of the game. With over 20 years behind the decks, he has played as far afield as Japan, South Africa and Australia together with regular European and UK dates. He has taken the famous ‘Recoverworld Live’ brand all over the world and regularly features as a guest mixer on various dance stations including “Recoverworld Radio” which has now been broadcasting for over 20 years…. In 2007 he released the mix album Dark Sessions which became Album of the Month in Mixmag and prompted Dj Mag to say, “this is trance at its most gorgeous”."
+      },
+      {
+        "title": "Label Owner",
+        "content": "Interflow Sounds, his first label, went from being a small imprint set up as primarily a vehicle for his own productions, to one of the UK’s leading independent hard dance/trance labels. In 2002 he closed that chapter with the critically acclaimed mix album ‘Harder, Faster, Deeper’. Having signed to Eve Records in 2001, Chris formed a relationship which would ultimately see him acquire the company in 2004. He now presides over a suite of labels under the RecoverWorld banner and has helped launch the careers of John O’Callaghan, John Askew, Sean Tyas, Thomas Datt, Manuel le Saux and many more."
+      },
+      {
+        "title": "Label Management",
+        "content": "Based on the success of his own labels and encyclopedic knowledge of the industry, RecoverWorld offer an end to end label management solution including royalty accounting, manufacturing and sales and distribution."
+      },
+      {
+        "title": "Publishing",
+        "content": "Supreme Music Publishing, the publishing side of RecoverWorld are proud to represent a catalogue in excess of 3000 songs worldwide."
+      },
+      {
+        "title": "Mentor",
+        "content": "Mentor for the UK government backed scheme “New Deal for Musicians”, guest lecturer at the British and Irish Institute of Modern Music (BIMM), artist manager, music production journalist and ambassador from two government sponsored overseas trade missions."
+      },
+      {
+        "title": "Business Solutions",
+        "content": "With the rise of digital media, he was one of the original directors of AMPsuite, the label management and distribution system which powers many of the world’s largest independent labels. He sold his share in 2018 but still uses it as the backbone for his guest lectures and his thriving label management business. His latest project, in partnership with Rob `Activa` Stevenson is the innovative vinyl manufacturing platform `The Record Republic`, a game changer in the world of record manufacturing. For more information please contact me here."
+      }
+    ]
+  },
+  {
+    "discography": [
+      {
+        "catNum": "EVECLSICS002",
+        "label": "Eve Records",
+        "title": "Scream 2 B Heard",
+        "artist": "SDM Soundclash, Chris Hampshire, Nikita, Jono Fernandez",
+        "links": {
+          "beatport": "https://www.beatport.com/release/scream-2-b-heard/3757814",
+          "recoverworldCatLink": "https://recoverworld.com/digital/EVECLSICS002",
+          "recoverWorldLabelLink": "https://recoverworld.com/digital/label/EVE%20Records"
+        }
+      },
+      {
+        "catNum": "DISCFDEL06",
+        "label": "Discover Records",
+        "title": "Futuristic (Feat. Shane 54)",
+        "artist": "Woody Van Eyden, Chris Hampshire, Shane 54, John Askew",
+        "links": {
+          "beatport": "https://www.beatport.com/release/futuristic-feat-shane-54/3407976",
+          "recoverworldCatLink": "https://recoverworld.com/digital/DISCFDEL06",
+          "recoverWorldLabelLink": "https://recoverworld.com/digital/label/Discover%20Records"
+        }
+      },
+      {
+        "catNum": "DISDAR235",
+        "label": "Discover Dark",
+        "title": "Twenty Five Years (Chris Hampshire Remix)",
+        "artist": "Oberon, Chris Hampshire",
+        "links": {
+          "beatport": "https://www.beatport.com/release/twenty-five-years-chris-hampshire-remix/3223531",
+          "recoverworldCatLink": "https://recoverworld.com/digital/DISDAR235",
+          "recoverWorldLabelLink": "https://recoverworld.com/digital/label/Discover%20Dark"
+        }
+      },
+      {
+        "catNum": "DISCOVER050B",
+        "label": "Discover Records",
+        "title": "The Vault",
+        "artist": "Chris Hampshire, Bissen, John Askew, Activa",
+        "links": {
+          "beatport": "https://www.beatport.com/release/the-vault/2992047",
+          "recoverworldCatLink": "https://recoverworld.com/digital/DISCOVER050B",
+          "recoverWorldLabelLink": "https://recoverworld.com/digital/label/Discover%20Records"
+        }
+      },
+      {
+        "catNum": "DISCOVER102",
+        "label": "Discover Records",
+        "title": "Ninety Four",
+        "artist": "Chris Hampshire, Lostly, Ex-Driver, Peter Hulsmans",
+        "links": {
+          "beatport": "https://www.beatport.com/release/ninety-four/1083500",
+          "recoverworldCatLink": "https://recoverworld.com/digital/DISCOVER102",
+          "recoverWorldLabelLink": "https://recoverworld.com/digital/label/Discover%20Records"
+        }
+      },
+      {
+        "catNum": "RECOVER44",
+        "label": "Recover Records",
+        "title": "Breathless",
+        "artist": "Chris Hampshire, Weatherley, Tony De Vit, Ali Wilson, Simon Eve, Paul Glazby, Pants & Corset",
+        "links": {
+          "beatport": "https://www.beatport.com/release/breathless/182256",
+          "recoverworldCatLink": "https://recoverworld.com/digital/RECOVER44 ",
+          "recoverWorldLabelLink": "https://recoverworld.com/digital/label/Recover"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,547 @@
+[debug] [2023-01-04T22:50:06.826Z] ----------------------------------------------------------------------
+[debug] [2023-01-04T22:50:06.828Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2023-01-04T22:50:06.828Z] CLI Version:   11.18.0
+[debug] [2023-01-04T22:50:06.828Z] Platform:      win32
+[debug] [2023-01-04T22:50:06.829Z] Node Version:  v18.12.1
+[debug] [2023-01-04T22:50:06.829Z] Time:          Wed Jan 04 2023 22:50:06 GMT+0000 (Greenwich Mean Time)
+[debug] [2023-01-04T22:50:06.829Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-04T22:50:06.886Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-04T22:50:06.886Z] > authorizing via signed-in user (carlwicker@gmail.com)
+[debug] [2023-01-04T22:50:06.886Z] [iam] checking project nextjs-chris-hampshire for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-01-04T22:50:06.888Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions [none]
+[debug] [2023-01-04T22:50:06.889Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T22:50:06.889Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-01-04T22:50:07.577Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions 200
+[debug] [2023-01-04T22:50:07.577Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-01-04T22:50:07.578Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-01-04T22:50:07.578Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-01-04T22:50:08.188Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-01-04T22:50:08.188Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'nextjs-chris-hampshire'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] +  functions: Finished running predeploy script. 
+[debug] [2023-01-04T22:50:13.441Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire [none]
+[debug] [2023-01-04T22:50:13.712Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire 200
+[debug] [2023-01-04T22:50:13.712Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire {"projectId":"nextjs-chris-hampshire","projectNumber":"1094999639492","displayName":"nextjs-chris-hampshire","name":"projects/nextjs-chris-hampshire","resources":{"hostingSite":"nextjs-chris-hampshire"},"state":"ACTIVE","etag":"1_469a648f-fd09-49a8-9114-85ed350ff197"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-01-04T22:50:13.715Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-01-04T22:50:13.715Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T22:50:13.716Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-01-04T22:50:13.716Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T22:50:13.717Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudbuild.googleapis.com [none]
+[debug] [2023-01-04T22:50:13.717Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudbuild.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T22:50:13.717Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/artifactregistry.googleapis.com [none]
+[debug] [2023-01-04T22:50:13.717Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/artifactregistry.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T22:50:14.544Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/runtimeconfig.googleapis.com 200
+[debug] [2023-01-04T22:50:14.544Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-01-04T22:50:14.556Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/artifactregistry.googleapis.com 200
+[debug] [2023-01-04T22:50:14.556Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-01-04T22:50:14.593Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudfunctions.googleapis.com 200
+[debug] [2023-01-04T22:50:14.593Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-01-04T22:50:14.677Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudbuild.googleapis.com 200
+[debug] [2023-01-04T22:50:14.677Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-01-04T22:50:14.677Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/adminSdkConfig [none]
+[debug] [2023-01-04T22:50:14.908Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/adminSdkConfig 200
+[debug] [2023-01-04T22:50:14.908Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/adminSdkConfig {"projectId":"nextjs-chris-hampshire","storageBucket":"nextjs-chris-hampshire.appspot.com"}
+[debug] [2023-01-04T22:50:14.909Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/configs [none]
+[debug] [2023-01-04T22:50:15.316Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/configs 200
+[debug] [2023-01-04T22:50:15.317Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2023-01-04T22:50:15.318Z] Validating nodejs source
+[debug] [2023-01-04T22:50:17.942Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2023-01-04T22:50:17.942Z] Building nodejs source
+[debug] [2023-01-04T22:50:17.944Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-01-04T22:50:18.201Z] Serving at port 9005
+
+[debug] [2023-01-04T22:50:18.676Z] Got response from /__/functions.yaml {"endpoints":{"addMessage":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"addMessage"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-01-04T22:50:18.681Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged D:\Web Developement Projects\nextjs-chris-hampshire\functions (52.89 KB) for uploading 
+[debug] [2023-01-04T22:50:18.748Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/-/functions [none]
+[debug] [2023-01-04T22:50:19.292Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/-/functions 200
+[debug] [2023-01-04T22:50:19.292Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/-/functions {"functions":[{"name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","httpsTrigger":{"url":"https://us-central1-nextjs-chris-hampshire.cloudfunctions.net/addMessage","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"addMessage","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"nextjs-chris-hampshire@appspot.gserviceaccount.com","updateTime":"2023-01-04T22:25:34.350Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"293fcbfc5b921a6359bf71e0730f2914c3685e4c"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/4aa6f1a3-fd98-43a8-aabe-fadb8d3227f1.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"runtime":"nodejs14","ingressSettings":"ALLOW_ALL","buildId":"a414fb63-746c-491b-ad84-4e499d7c4470","buildName":"projects/1094999639492/locations/us-central1/builds/a414fb63-746c-491b-ad84-4e499d7c4470","dockerRegistry":"ARTIFACT_REGISTRY"}]}
+[debug] [2023-01-04T22:50:19.293Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/nextjs-chris-hampshire/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-01-04T22:50:20.308Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/nextjs-chris-hampshire/locations/-/functions 200
+[debug] [2023-01-04T22:50:20.308Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/nextjs-chris-hampshire/locations/-/functions {"functions":[{"name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/ssrnextjschrishampshire","buildConfig":{"build":"projects/1094999639492/locations/us-central1/builds/a4a45c4c-d6ba-4a57-9142-32f85013aa9e","runtime":"nodejs18","entryPoint":"ssr","source":{"storageSource":{"bucket":"gcf-v2-sources-1094999639492-us-central1","object":"ssrnextjschrishampshire/function-source.zip"}},"sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1094999639492-us-central1","object":"ssrnextjschrishampshire/function-source.zip","generation":"1672868911862084"}}},"serviceConfig":{"service":"projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire","timeoutSeconds":60,"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"nextjs-chris-hampshire\",\"appId\":\"1:1094999639492:web:3aa2b2fa4520b389145091\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\",\"apiKey\":\"AIzaSyAzu9VJLOySvINHVwGhsRQynUXp-uLt-UI\",\"authDomain\":\"nextjs-chris-hampshire.firebaseapp.com\",\"messagingSenderId\":\"1094999639492\",\"measurementId\":\"G-G872LRYGDD\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://ssrnextjschrishampshire-lcochqqctq-uc.a.run.app","serviceAccountEmail":"1094999639492-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssrnextjschrishampshire-00017-nic","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2023-01-04T21:51:50.067036198Z","labels":{"firebase-functions-hash":"cb0a06f4c324ddde5323e40402be192f84b9c1b5","deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-nextjs-chris-hampshire"},"environment":"GEN_2"}]}
+[debug] [2023-01-04T22:50:20.308Z] >>> [apiv2][query] GET https://run.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire [none]
+[debug] [2023-01-04T22:50:21.121Z] <<< [apiv2][status] GET https://run.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire 200
+[debug] [2023-01-04T22:50:21.121Z] <<< [apiv2][body] GET https://run.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire {"apiVersion":"serving.knative.dev/v1","kind":"Service","metadata":{"name":"ssrnextjschrishampshire","namespace":"1094999639492","selfLink":"/apis/serving.knative.dev/v1/namespaces/1094999639492/services/ssrnextjschrishampshire","uid":"eb0372a4-8dd4-4aba-b4c1-8d78866b6fd8","resourceVersion":"AAXxdzDdMvA","generation":17,"labels":{"goog-managed-by":"cloudfunctions","goog-cloudfunctions-runtime":"nodejs18","cloud.googleapis.com/location":"us-central1"},"annotations":{"run.googleapis.com/client-name":"cli-firebase","serving.knative.dev/creator":"service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com","serving.knative.dev/lastModifier":"service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com","client.knative.dev/user-image":"us-central1-docker.pkg.dev/nextjs-chris-hampshire/gcf-artifacts/ssrnextjschrishampshire:version_1","cloudfunctions.googleapis.com/function-id":"ssrnextjschrishampshire","run.googleapis.com/ingress":"all","run.googleapis.com/ingress-status":"all"},"creationTimestamp":"2023-01-04T11:55:18.563725Z"},"spec":{"template":{"metadata":{"name":"ssrnextjschrishampshire-00017-nic","annotations":{"run.googleapis.com/client-name":"cli-firebase","cloudfunctions.googleapis.com/trigger-type":"HTTP_TRIGGER","client.knative.dev/user-image":"us-central1-docker.pkg.dev/nextjs-chris-hampshire/gcf-artifacts/ssrnextjschrishampshire:version_1","autoscaling.knative.dev/maxScale":"100","run.googleapis.com/cpu-throttling":"true","run.googleapis.com/startup-cpu-boost":"true"}},"spec":{"containerConcurrency":80,"timeoutSeconds":60,"serviceAccountName":"1094999639492-compute@developer.gserviceaccount.com","containers":[{"image":"us-central1-docker.pkg.dev/nextjs-chris-hampshire/gcf-artifacts/ssrnextjschrishampshire:version_1","env":[{"name":"__FIREBASE_FRAMEWORKS_ENTRY__","value":"next.js"},{"name":"__FIREBASE_DEFAULTS__","value":"{\"config\":{\"projectId\":\"nextjs-chris-hampshire\",\"appId\":\"1:1094999639492:web:3aa2b2fa4520b389145091\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\",\"apiKey\":\"AIzaSyAzu9VJLOySvINHVwGhsRQynUXp-uLt-UI\",\"authDomain\":\"nextjs-chris-hampshire.firebaseapp.com\",\"messagingSenderId\":\"1094999639492\",\"measurementId\":\"G-G872LRYGDD\"},\"_authTokenSyncURL\":\"/__session\"}"},{"name":"FIREBASE_CONFIG","value":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}"},{"name":"GCLOUD_PROJECT","value":"nextjs-chris-hampshire"},{"name":"EVENTARC_CLOUD_EVENT_SOURCE","value":"projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire"}],"resources":{"limits":{"cpu":"1","memory":"256Mi"}},"ports":[{"name":"http1","containerPort":8080}]}]}},"traffic":[{"percent":100,"latestRevision":true}]},"status":{"observedGeneration":17,"conditions":[{"type":"Ready","status":"True","lastTransitionTime":"2023-01-04T21:51:46.542227Z"},{"type":"ConfigurationsReady","status":"True","lastTransitionTime":"2023-01-04T21:51:41.504776Z"},{"type":"RoutesReady","status":"True","lastTransitionTime":"2023-01-04T21:51:46.758384Z"}],"latestReadyRevisionName":"ssrnextjschrishampshire-00017-nic","latestCreatedRevisionName":"ssrnextjschrishampshire-00017-nic","traffic":[{"revisionName":"ssrnextjschrishampshire-00017-nic","percent":100,"latestRevision":true}],"url":"https://ssrnextjschrishampshire-lcochqqctq-uc.a.run.app","address":{"url":"https://ssrnextjschrishampshire-lcochqqctq-uc.a.run.app"}}}
+[debug] [2023-01-04T22:50:21.127Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire [none]
+[debug] [2023-01-04T22:50:21.345Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire 200
+[debug] [2023-01-04T22:50:21.345Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire {"projectId":"nextjs-chris-hampshire","projectNumber":"1094999639492","displayName":"nextjs-chris-hampshire","name":"projects/nextjs-chris-hampshire","resources":{"hostingSite":"nextjs-chris-hampshire"},"state":"ACTIVE","etag":"1_469a648f-fd09-49a8-9114-85ed350ff197"}
+[debug] [2023-01-04T22:50:21.346Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-01-04T22:50:21.346Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2023-01-04T22:50:21.894Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-01-04T22:50:21.894Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D"}
+[debug] [2023-01-04T22:50:21.895Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip GoogleAccessId=service-1094999639492%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D
+[debug] [2023-01-04T22:50:21.895Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip [stream]
+[debug] [2023-01-04T22:50:22.180Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip 200
+[debug] [2023-01-04T22:50:22.180Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: updating Node.js 14 function addMessage(us-central1)... 
+[debug] [2023-01-04T22:50:22.184Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage updateMask=name%2CsourceUploadUrl%2CentryPoint%2Cruntime%2CdockerRegistry%2Clabels%2ChttpsTrigger.securityLevel%2CminInstances%2CmaxInstances%2CingressSettings%2CenvironmentVariables%2CserviceAccountEmail%2CavailableMemoryMb%2Ctimeout%2CvpcConnector%2CvpcConnectorEgressSettings%2CsourceToken
+[debug] [2023-01-04T22:50:22.185Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage {"name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D","entryPoint":"addMessage","runtime":"nodejs14","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"241523f157e17bbad8e8250c05ea659267739d42"},"httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"minInstances":null,"maxInstances":null,"ingressSettings":null,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"serviceAccountEmail":null,"availableMemoryMb":null,"timeout":null,"vpcConnector":null,"vpcConnectorEgressSettings":null}
+[debug] [2023-01-04T22:50:22.767Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage 200
+[debug] [2023-01-04T22:50:22.767Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage {"name":"operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","httpsTrigger":{"url":"https://us-central1-nextjs-chris-hampshire.cloudfunctions.net/addMessage","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"addMessage","updateTime":"2023-01-04T22:25:34.350Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"241523f157e17bbad8e8250c05ea659267739d42"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"runtime":"nodejs14","buildId":"a414fb63-746c-491b-ad84-4e499d7c4470","buildName":"projects/1094999639492/locations/us-central1/builds/a414fb63-746c-491b-ad84-4e499d7c4470","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"3","updateTime":"2023-01-04T22:52:58Z"}}
+[debug] [2023-01-04T22:50:22.767Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr [none]
+[debug] [2023-01-04T22:50:23.009Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr 200
+[debug] [2023-01-04T22:50:23.009Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr {"name":"operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","httpsTrigger":{"url":"https://us-central1-nextjs-chris-hampshire.cloudfunctions.net/addMessage","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"addMessage","updateTime":"2023-01-04T22:25:34.350Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"241523f157e17bbad8e8250c05ea659267739d42"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"runtime":"nodejs14","buildId":"a414fb63-746c-491b-ad84-4e499d7c4470","buildName":"projects/1094999639492/locations/us-central1/builds/a414fb63-746c-491b-ad84-4e499d7c4470","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"3","updateTime":"2023-01-04T22:52:58Z"}}
+[debug] [2023-01-04T22:50:23.510Z] [update-default-us-central1-addMessage] Retrying task index 0
+[debug] [2023-01-04T22:50:23.510Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr [none]
+[debug] [2023-01-04T22:50:23.766Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr 200
+[debug] [2023-01-04T22:50:23.766Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr {"name":"operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","httpsTrigger":{"url":"https://us-central1-nextjs-chris-hampshire.cloudfunctions.net/addMessage","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"addMessage","updateTime":"2023-01-04T22:25:34.350Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"241523f157e17bbad8e8250c05ea659267739d42"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"runtime":"nodejs14","buildId":"a414fb63-746c-491b-ad84-4e499d7c4470","buildName":"projects/1094999639492/locations/us-central1/builds/a414fb63-746c-491b-ad84-4e499d7c4470","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"3","updateTime":"2023-01-04T22:52:58Z","buildId":"5622bb09-39bc-45dc-8595-d6c85d8f9baf","buildName":"projects/1094999639492/locations/us-central1/builds/5622bb09-39bc-45dc-8595-d6c85d8f9baf"}}
+[debug] [2023-01-04T22:50:24.766Z] [update-default-us-central1-addMessage] Retrying task index 0
+[debug] [2023-01-04T22:50:24.767Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr [none]
+[debug] [2023-01-04T22:50:25.032Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr 200
+[debug] [2023-01-04T22:50:25.032Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr {"name":"operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","httpsTrigger":{"url":"https://us-central1-nextjs-chris-hampshire.cloudfunctions.net/addMessage","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"addMessage","updateTime":"2023-01-04T22:25:34.350Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"241523f157e17bbad8e8250c05ea659267739d42"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"runtime":"nodejs14","buildId":"a414fb63-746c-491b-ad84-4e499d7c4470","buildName":"projects/1094999639492/locations/us-central1/builds/a414fb63-746c-491b-ad84-4e499d7c4470","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"3","updateTime":"2023-01-04T22:52:58Z","buildId":"5622bb09-39bc-45dc-8595-d6c85d8f9baf","buildName":"projects/1094999639492/locations/us-central1/builds/5622bb09-39bc-45dc-8595-d6c85d8f9baf"}}
+[debug] [2023-01-04T22:50:27.033Z] [update-default-us-central1-addMessage] Retrying task index 0
+[debug] [2023-01-04T22:50:27.034Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr [none]
+[debug] [2023-01-04T22:50:27.304Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr 200
+[debug] [2023-01-04T22:50:27.304Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr {"name":"operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","httpsTrigger":{"url":"https://us-central1-nextjs-chris-hampshire.cloudfunctions.net/addMessage","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"addMessage","updateTime":"2023-01-04T22:25:34.350Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"241523f157e17bbad8e8250c05ea659267739d42"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"runtime":"nodejs14","buildId":"a414fb63-746c-491b-ad84-4e499d7c4470","buildName":"projects/1094999639492/locations/us-central1/builds/a414fb63-746c-491b-ad84-4e499d7c4470","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"3","updateTime":"2023-01-04T22:52:58Z","buildId":"5622bb09-39bc-45dc-8595-d6c85d8f9baf","buildName":"projects/1094999639492/locations/us-central1/builds/5622bb09-39bc-45dc-8595-d6c85d8f9baf"}}
+[debug] [2023-01-04T22:50:31.305Z] [update-default-us-central1-addMessage] Retrying task index 0
+[debug] [2023-01-04T22:50:31.305Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr [none]
+[debug] [2023-01-04T22:50:31.583Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr 200
+[debug] [2023-01-04T22:50:31.583Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr {"name":"operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","httpsTrigger":{"url":"https://us-central1-nextjs-chris-hampshire.cloudfunctions.net/addMessage","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"addMessage","updateTime":"2023-01-04T22:25:34.350Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"241523f157e17bbad8e8250c05ea659267739d42"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"runtime":"nodejs14","buildId":"a414fb63-746c-491b-ad84-4e499d7c4470","buildName":"projects/1094999639492/locations/us-central1/builds/a414fb63-746c-491b-ad84-4e499d7c4470","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"3","updateTime":"2023-01-04T22:52:58Z","buildId":"5622bb09-39bc-45dc-8595-d6c85d8f9baf","buildName":"projects/1094999639492/locations/us-central1/builds/5622bb09-39bc-45dc-8595-d6c85d8f9baf"}}
+[debug] [2023-01-04T22:50:39.584Z] [update-default-us-central1-addMessage] Retrying task index 0
+[debug] [2023-01-04T22:50:39.584Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr [none]
+[debug] [2023-01-04T22:50:39.830Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr 200
+[debug] [2023-01-04T22:50:39.830Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr {"name":"operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","httpsTrigger":{"url":"https://us-central1-nextjs-chris-hampshire.cloudfunctions.net/addMessage","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"addMessage","updateTime":"2023-01-04T22:25:34.350Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"241523f157e17bbad8e8250c05ea659267739d42"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"runtime":"nodejs14","buildId":"a414fb63-746c-491b-ad84-4e499d7c4470","buildName":"projects/1094999639492/locations/us-central1/builds/a414fb63-746c-491b-ad84-4e499d7c4470","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"3","updateTime":"2023-01-04T22:52:58Z","buildId":"5622bb09-39bc-45dc-8595-d6c85d8f9baf","buildName":"projects/1094999639492/locations/us-central1/builds/5622bb09-39bc-45dc-8595-d6c85d8f9baf"}}
+[debug] [2023-01-04T22:50:49.830Z] [update-default-us-central1-addMessage] Retrying task index 0
+[debug] [2023-01-04T22:50:49.831Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr [none]
+[debug] [2023-01-04T22:50:50.069Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr 200
+[debug] [2023-01-04T22:50:50.069Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr {"name":"operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","httpsTrigger":{"url":"https://us-central1-nextjs-chris-hampshire.cloudfunctions.net/addMessage","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"addMessage","updateTime":"2023-01-04T22:25:34.350Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"241523f157e17bbad8e8250c05ea659267739d42"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"runtime":"nodejs14","buildId":"a414fb63-746c-491b-ad84-4e499d7c4470","buildName":"projects/1094999639492/locations/us-central1/builds/a414fb63-746c-491b-ad84-4e499d7c4470","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"3","updateTime":"2023-01-04T22:52:58Z","buildId":"5622bb09-39bc-45dc-8595-d6c85d8f9baf","buildName":"projects/1094999639492/locations/us-central1/builds/5622bb09-39bc-45dc-8595-d6c85d8f9baf"}}
+[debug] [2023-01-04T22:51:00.069Z] [update-default-us-central1-addMessage] Retrying task index 0
+[debug] [2023-01-04T22:51:00.070Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr [none]
+[debug] [2023-01-04T22:51:00.304Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr 200
+[debug] [2023-01-04T22:51:00.304Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr {"name":"operations/bmV4dGpzLWNocmlzLWhhbXBzaGlyZS91cy1jZW50cmFsMS9hZGRNZXNzYWdlL3VpTDJucV95TWtr","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","httpsTrigger":{"url":"https://us-central1-nextjs-chris-hampshire.cloudfunctions.net/addMessage","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"addMessage","updateTime":"2023-01-04T22:25:34.350Z","versionId":"2","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"241523f157e17bbad8e8250c05ea659267739d42"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672874577&Signature=EVPVoCfmyWTfKzcukXrBoIuF7bEkZGIlqb1kkOwguLF1aWpEs17HRP1LKhGbK6zWeaTqLe8tSZR2rsRAD4m6UkaDDoGMDjPLvgUeCc7pyYsPvA8RpW4M9ittpUlJ7R4GILuJx%2BM9pjjSCuy92SXNwcZ2IlzdxfAByqlhBdbbTlsrKaTPM4k16vUsQ0lYuXC4zrol1JcG79dzdfdCeGAL0hesEOp1WIBXZwA9pP2AjuAXdyBRx7J2xwpjS5CoppBJElS9YIJ4SdIPXhvPCmOdIwV%2B2jfJMzZdDmgfHE6YPb7FHChTicqu5biiIgmYRCkbYqCqOYkFtCRLoulJIXTH%2FA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"runtime":"nodejs14","buildId":"a414fb63-746c-491b-ad84-4e499d7c4470","buildName":"projects/1094999639492/locations/us-central1/builds/a414fb63-746c-491b-ad84-4e499d7c4470","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"3","updateTime":"2023-01-04T22:53:31Z","buildId":"5622bb09-39bc-45dc-8595-d6c85d8f9baf","buildName":"projects/1094999639492/locations/us-central1/builds/5622bb09-39bc-45dc-8595-d6c85d8f9baf"},"done":true,"error":{"code":3,"message":"Build failed: npm ERR! Cannot read property 'firebase-admin' of undefined\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /www-data-home/.npm/_logs/2023-01-04T22_53_22_052Z-debug.log; Error ID: beaf8772"}}
+[debug] [2023-01-04T22:51:00.304Z] Got source token undefined for region us-central1
+[error] Build failed: npm ERR! Cannot read property 'firebase-admin' of undefined
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /www-data-home/.npm/_logs/2023-01-04T22_53_22_052Z-debug.log; Error ID: beaf8772
+[debug] [2023-01-04T22:51:00.309Z] Total Function Deployment time: 38122
+[debug] [2023-01-04T22:51:00.309Z] 1 Functions Deployed
+[debug] [2023-01-04T22:51:00.309Z] 1 Functions Errored
+[debug] [2023-01-04T22:51:00.309Z] 0 Function Deployments Aborted
+[debug] [2023-01-04T22:51:00.309Z] Average Function Deployment time: 38122
+[info] 
+[info] Functions deploy had errors with the following functions:
+	addMessage(us-central1)
+[debug] [2023-01-04T22:51:00.409Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-01-04T22:51:00.410Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/nextjs-chris-hampshire/locations/us-central1/repositories/gcf-artifacts/packages/add_message [none]
+[debug] [2023-01-04T22:51:00.411Z] >>> [apiv2][query] GET https://us.gcr.io/v2/nextjs-chris-hampshire/gcf/us-central1/tags/list [none]
+[debug] [2023-01-04T22:51:00.728Z] <<< [apiv2][status] GET https://us.gcr.io/v2/nextjs-chris-hampshire/gcf/us-central1/tags/list 200
+[debug] [2023-01-04T22:51:00.728Z] <<< [apiv2][body] GET https://us.gcr.io/v2/nextjs-chris-hampshire/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"nextjs-chris-hampshire/gcf/us-central1","tags":[]}
+[debug] [2023-01-04T22:51:00.728Z] Could not find image for function projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage
+[debug] [2023-01-04T22:51:01.173Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/nextjs-chris-hampshire/locations/us-central1/repositories/gcf-artifacts/packages/add_message 404
+[debug] [2023-01-04T22:51:01.173Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/nextjs-chris-hampshire/locations/us-central1/repositories/gcf-artifacts/packages/add_message {"error":{"code":404,"message":"Package \"projects/nextjs-chris-hampshire/locations/us-central1/repositories/gcf-artifacts/packages/add_message\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-01-04T22:51:01.174Z] Functions deploy failed.
+[debug] [2023-01-04T22:51:01.174Z] {
+  "endpoint": {
+    "id": "addMessage",
+    "project": "nextjs-chris-hampshire",
+    "region": "us-central1",
+    "entryPoint": "addMessage",
+    "platform": "gcfv1",
+    "runtime": "nodejs14",
+    "httpsTrigger": {},
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}",
+      "GCLOUD_PROJECT": "nextjs-chris-hampshire",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"
+    },
+    "codebase": "default",
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "241523f157e17bbad8e8250c05ea659267739d42",
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    }
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Build failed: npm ERR! Cannot read property 'firebase-admin' of undefined\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /www-data-home/.npm/_logs/2023-01-04T22_53_22_052Z-debug.log; Error ID: beaf8772",
+    "status": 3
+  }
+}
+[debug] [2023-01-04T22:51:01.259Z] Error: Failed to update function addMessage in region us-central1
+    at C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:41:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.updateV1Function (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:304:32)
+    at async Fabricator.updateEndpoint (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:140:13)
+    at async handle (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:78:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2023-01-04T22:53:49.215Z] ----------------------------------------------------------------------
+[debug] [2023-01-04T22:53:49.217Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-01-04T22:53:49.217Z] CLI Version:   11.18.0
+[debug] [2023-01-04T22:53:49.217Z] Platform:      win32
+[debug] [2023-01-04T22:53:49.218Z] Node Version:  v18.12.1
+[debug] [2023-01-04T22:53:49.218Z] Time:          Wed Jan 04 2023 22:53:49 GMT+0000 (Greenwich Mean Time)
+[debug] [2023-01-04T22:53:49.218Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-04T22:53:49.274Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-04T22:53:49.275Z] > authorizing via signed-in user (carlwicker@gmail.com)
+[debug] [2023-01-04T22:53:49.275Z] [iam] checking project nextjs-chris-hampshire for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-04T22:53:49.277Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions [none]
+[debug] [2023-01-04T22:53:49.277Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T22:53:49.278Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-04T22:53:49.978Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions 200
+[debug] [2023-01-04T22:53:49.978Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-04T22:53:49.979Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-01-04T22:53:49.979Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-01-04T22:53:50.556Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-01-04T22:53:50.557Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-01-04T22:53:50.557Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire [none]
+[debug] [2023-01-04T22:53:50.828Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire 200
+[debug] [2023-01-04T22:53:50.828Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire {"projectId":"nextjs-chris-hampshire","projectNumber":"1094999639492","displayName":"nextjs-chris-hampshire","name":"projects/nextjs-chris-hampshire","resources":{"hostingSite":"nextjs-chris-hampshire"},"state":"ACTIVE","etag":"1_469a648f-fd09-49a8-9114-85ed350ff197"}
+[debug] [2023-01-04T22:53:56.134Z] defaultcredentials: writing to file C:\Users\Carl Wicker\AppData\Roaming\firebase\carlwicker_gmail_com_application_default_credentials.json
+[debug] [2023-01-04T22:53:56.136Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/sites pageToken=&pageSize=10
+[debug] [2023-01-04T22:53:57.011Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/sites 200
+[debug] [2023-01-04T22:53:57.011Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/sites {"sites":[{"name":"projects/nextjs-chris-hampshire/sites/nextjs-chris-hampshire","defaultUrl":"https://nextjs-chris-hampshire.web.app","appId":"1:1094999639492:web:3aa2b2fa4520b389145091","type":"DEFAULT_SITE"}]}
+[debug] [2023-01-04T22:53:57.011Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1094999639492:web:3aa2b2fa4520b389145091/config [none]
+[debug] [2023-01-04T22:53:57.999Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1094999639492:web:3aa2b2fa4520b389145091/config 200
+[debug] [2023-01-04T22:53:57.999Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1094999639492:web:3aa2b2fa4520b389145091/config {"projectId":"nextjs-chris-hampshire","appId":"1:1094999639492:web:3aa2b2fa4520b389145091","storageBucket":"nextjs-chris-hampshire.appspot.com","apiKey":"AIzaSyAzu9VJLOySvINHVwGhsRQynUXp-uLt-UI","authDomain":"nextjs-chris-hampshire.firebaseapp.com","messagingSenderId":"1094999639492","measurementId":"G-G872LRYGDD"}
+[debug] [2023-01-04T22:54:10.054Z] Error: Build failed because of webpack errors
+    at D:\Web Developement Projects\nextjs-chris-hampshire\node_modules\next\dist\build\index.js:578:29
+    at async Span.traceAsyncFn (D:\Web Developement Projects\nextjs-chris-hampshire\node_modules\next\dist\trace\trace.js:79:20)
+    at async build (D:\Web Developement Projects\nextjs-chris-hampshire\node_modules\next\dist\build\index.js:66:29)
+    at async build (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:48:5)
+    at async prepareFrameworks (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:243:93)
+    at async deploy (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-01-04T22:56:20.742Z] ----------------------------------------------------------------------
+[debug] [2023-01-04T22:56:20.744Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-01-04T22:56:20.744Z] CLI Version:   11.18.0
+[debug] [2023-01-04T22:56:20.744Z] Platform:      win32
+[debug] [2023-01-04T22:56:20.744Z] Node Version:  v18.12.1
+[debug] [2023-01-04T22:56:20.745Z] Time:          Wed Jan 04 2023 22:56:20 GMT+0000 (Greenwich Mean Time)
+[debug] [2023-01-04T22:56:20.745Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-04T22:56:20.800Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-04T22:56:20.800Z] > authorizing via signed-in user (carlwicker@gmail.com)
+[debug] [2023-01-04T22:56:20.800Z] [iam] checking project nextjs-chris-hampshire for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-04T22:56:20.802Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions [none]
+[debug] [2023-01-04T22:56:20.803Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T22:56:20.803Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-04T22:56:21.480Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions 200
+[debug] [2023-01-04T22:56:21.480Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-04T22:56:21.480Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-01-04T22:56:21.480Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-01-04T22:56:21.770Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-01-04T22:56:21.770Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-01-04T22:56:21.771Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire [none]
+[debug] [2023-01-04T22:56:22.072Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire 200
+[debug] [2023-01-04T22:56:22.072Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire {"projectId":"nextjs-chris-hampshire","projectNumber":"1094999639492","displayName":"nextjs-chris-hampshire","name":"projects/nextjs-chris-hampshire","resources":{"hostingSite":"nextjs-chris-hampshire"},"state":"ACTIVE","etag":"1_469a648f-fd09-49a8-9114-85ed350ff197"}
+[debug] [2023-01-04T22:56:25.784Z] defaultcredentials: writing to file C:\Users\Carl Wicker\AppData\Roaming\firebase\carlwicker_gmail_com_application_default_credentials.json
+[debug] [2023-01-04T22:56:25.785Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/sites pageToken=&pageSize=10
+[debug] [2023-01-04T22:56:26.630Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/sites 200
+[debug] [2023-01-04T22:56:26.630Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/sites {"sites":[{"name":"projects/nextjs-chris-hampshire/sites/nextjs-chris-hampshire","defaultUrl":"https://nextjs-chris-hampshire.web.app","appId":"1:1094999639492:web:3aa2b2fa4520b389145091","type":"DEFAULT_SITE"}]}
+[debug] [2023-01-04T22:56:26.630Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1094999639492:web:3aa2b2fa4520b389145091/config [none]
+[debug] [2023-01-04T22:56:27.668Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1094999639492:web:3aa2b2fa4520b389145091/config 200
+[debug] [2023-01-04T22:56:27.668Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1094999639492:web:3aa2b2fa4520b389145091/config {"projectId":"nextjs-chris-hampshire","appId":"1:1094999639492:web:3aa2b2fa4520b389145091","storageBucket":"nextjs-chris-hampshire.appspot.com","apiKey":"AIzaSyAzu9VJLOySvINHVwGhsRQynUXp-uLt-UI","authDomain":"nextjs-chris-hampshire.firebaseapp.com","messagingSenderId":"1094999639492","measurementId":"G-G872LRYGDD"}
+[debug] [2023-01-04T22:56:41.417Z] Error: Build failed because of webpack errors
+    at D:\Web Developement Projects\nextjs-chris-hampshire\node_modules\next\dist\build\index.js:578:29
+    at async Span.traceAsyncFn (D:\Web Developement Projects\nextjs-chris-hampshire\node_modules\next\dist\trace\trace.js:79:20)
+    at async build (D:\Web Developement Projects\nextjs-chris-hampshire\node_modules\next\dist\build\index.js:66:29)
+    at async build (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:48:5)
+    at async prepareFrameworks (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:243:93)
+    at async deploy (C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-01-04T23:12:27.415Z] ----------------------------------------------------------------------
+[debug] [2023-01-04T23:12:27.416Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-01-04T23:12:27.417Z] CLI Version:   11.18.0
+[debug] [2023-01-04T23:12:27.417Z] Platform:      win32
+[debug] [2023-01-04T23:12:27.417Z] Node Version:  v18.12.1
+[debug] [2023-01-04T23:12:27.418Z] Time:          Wed Jan 04 2023 23:12:27 GMT+0000 (Greenwich Mean Time)
+[debug] [2023-01-04T23:12:27.418Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-04T23:12:27.476Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-04T23:12:27.477Z] > authorizing via signed-in user (carlwicker@gmail.com)
+[debug] [2023-01-04T23:12:27.477Z] [iam] checking project nextjs-chris-hampshire for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-04T23:12:27.480Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions [none]
+[debug] [2023-01-04T23:12:27.480Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T23:12:27.480Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-04T23:12:28.173Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions 200
+[debug] [2023-01-04T23:12:28.173Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-04T23:12:28.174Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-01-04T23:12:28.174Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-01-04T23:12:28.789Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-01-04T23:12:28.790Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-01-04T23:12:28.790Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire [none]
+[debug] [2023-01-04T23:12:29.088Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire 200
+[debug] [2023-01-04T23:12:29.088Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire {"projectId":"nextjs-chris-hampshire","projectNumber":"1094999639492","displayName":"nextjs-chris-hampshire","name":"projects/nextjs-chris-hampshire","resources":{"hostingSite":"nextjs-chris-hampshire"},"state":"ACTIVE","etag":"1_8ed5d22e-1a04-4fe2-9c2b-cacf8637abe8"}
+[debug] [2023-01-04T23:12:32.787Z] defaultcredentials: writing to file C:\Users\Carl Wicker\AppData\Roaming\firebase\carlwicker_gmail_com_application_default_credentials.json
+[debug] [2023-01-04T23:12:32.788Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/sites pageToken=&pageSize=10
+[debug] [2023-01-04T23:12:33.674Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/sites 200
+[debug] [2023-01-04T23:12:33.674Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/sites {"sites":[{"name":"projects/nextjs-chris-hampshire/sites/nextjs-chris-hampshire","defaultUrl":"https://nextjs-chris-hampshire.web.app","appId":"1:1094999639492:web:3aa2b2fa4520b389145091","type":"DEFAULT_SITE"}]}
+[debug] [2023-01-04T23:12:33.675Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1094999639492:web:3aa2b2fa4520b389145091/config [none]
+[debug] [2023-01-04T23:12:34.580Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1094999639492:web:3aa2b2fa4520b389145091/config 200
+[debug] [2023-01-04T23:12:34.581Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1094999639492:web:3aa2b2fa4520b389145091/config {"projectId":"nextjs-chris-hampshire","appId":"1:1094999639492:web:3aa2b2fa4520b389145091","storageBucket":"nextjs-chris-hampshire.appspot.com","apiKey":"AIzaSyAzu9VJLOySvINHVwGhsRQynUXp-uLt-UI","authDomain":"nextjs-chris-hampshire.firebaseapp.com","messagingSenderId":"1094999639492","measurementId":"G-G872LRYGDD"}
+[info] 
+[info] === Deploying to 'nextjs-chris-hampshire'...
+[info] 
+[info] i  deploying functions, hosting 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] +  functions: Finished running predeploy script. 
+[debug] [2023-01-04T23:13:04.658Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire [none]
+[debug] [2023-01-04T23:13:04.935Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire 200
+[debug] [2023-01-04T23:13:04.935Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire {"projectId":"nextjs-chris-hampshire","projectNumber":"1094999639492","displayName":"nextjs-chris-hampshire","name":"projects/nextjs-chris-hampshire","resources":{"hostingSite":"nextjs-chris-hampshire"},"state":"ACTIVE","etag":"1_8ed5d22e-1a04-4fe2-9c2b-cacf8637abe8"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-01-04T23:13:04.937Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-01-04T23:13:04.937Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T23:13:04.938Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-01-04T23:13:04.938Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T23:13:04.939Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudbuild.googleapis.com [none]
+[debug] [2023-01-04T23:13:04.939Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudbuild.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T23:13:04.940Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/artifactregistry.googleapis.com [none]
+[debug] [2023-01-04T23:13:04.940Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/artifactregistry.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T23:13:05.800Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/runtimeconfig.googleapis.com 200
+[debug] [2023-01-04T23:13:05.801Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-01-04T23:13:05.801Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/artifactregistry.googleapis.com 200
+[debug] [2023-01-04T23:13:05.801Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-01-04T23:13:05.806Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudfunctions.googleapis.com 200
+[debug] [2023-01-04T23:13:05.806Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-01-04T23:13:05.819Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudbuild.googleapis.com 200
+[debug] [2023-01-04T23:13:05.819Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-01-04T23:13:05.820Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/adminSdkConfig [none]
+[debug] [2023-01-04T23:13:06.084Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/adminSdkConfig 200
+[debug] [2023-01-04T23:13:06.084Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/adminSdkConfig {"projectId":"nextjs-chris-hampshire","storageBucket":"nextjs-chris-hampshire.appspot.com"}
+[debug] [2023-01-04T23:13:06.085Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/configs [none]
+[debug] [2023-01-04T23:13:06.367Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/configs 200
+[debug] [2023-01-04T23:13:06.367Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/nextjs-chris-hampshire/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2023-01-04T23:13:06.369Z] Validating nodejs source
+[debug] [2023-01-04T23:13:09.747Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2023-01-04T23:13:09.747Z] Building nodejs source
+[debug] [2023-01-04T23:13:09.748Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-01-04T23:13:10.012Z] Serving at port 9005
+
+[debug] [2023-01-04T23:13:10.309Z] Got response from /__/functions.yaml {"endpoints":{"addMessage":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"addMessage"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-01-04T23:13:10.314Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing codebase firebase-frameworks-nextjs-chris-hampshire for deployment 
+[debug] [2023-01-04T23:13:10.328Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-01-04T23:13:13.404Z] > [functions] package.json contents: {
+  "name": "nextjs-chris-hampshire",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.8",
+    "firebase": "^9.15.0",
+    "firebase-admin": "^11.4.1",
+    "firebase-tools": "^11.19.0",
+    "framer-motion": "^8.1.7",
+    "locomotive-scroll": "^4.1.4",
+    "next": "^13.1.1",
+    "npm": "^9.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-locomotive-scroll": "^0.2.2",
+    "swr": "^2.0.0",
+    "firebase-frameworks": "^0.6.0",
+    "firebase-functions": "^3.23.0"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2023-01-04T23:13:13.404Z] Building nodejs source
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2023-01-04T23:13:13.407Z] Found functions.yaml. Got spec: {
+  "endpoints": {
+    "ssrnextjschrishampshire": {
+      "platform": "gcfv2",
+      "region": [
+        "us-central1"
+      ],
+      "labels": {},
+      "httpsTrigger": {},
+      "entryPoint": "ssr"
+    }
+  },
+  "specVersion": "v1alpha1",
+  "requiredAPIs": []
+}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged D:\Web Developement Projects\nextjs-chris-hampshire\functions (52.89 KB) for uploading 
+[info] i  functions: preparing .firebase\nextjs-chris-hampshire\functions directory for uploading... 
+[info] i  functions: packaged D:\Web Developement Projects\nextjs-chris-hampshire\.firebase\nextjs-chris-hampshire\functions (94.6 MB) for uploading 
+[debug] [2023-01-04T23:13:17.981Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/-/functions [none]
+[debug] [2023-01-04T23:13:18.529Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/-/functions 200
+[debug] [2023-01-04T23:13:18.529Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/-/functions {"functions":[{"name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage","httpsTrigger":{"url":"https://us-central1-nextjs-chris-hampshire.cloudfunctions.net/addMessage","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"addMessage","timeout":"60s","availableMemoryMb":256,"updateTime":"2023-01-04T22:25:34.350Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"241523f157e17bbad8e8250c05ea659267739d42"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-653095880806.us-central1.cloudfunctions.appspot.com/60fcf5fa-6ee3-458a-bde2-7894852c4bd1.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/functions/addMessage"},"runtime":"nodejs14","ingressSettings":"ALLOW_ALL","buildId":"5622bb09-39bc-45dc-8595-d6c85d8f9baf","buildName":"projects/1094999639492/locations/us-central1/builds/5622bb09-39bc-45dc-8595-d6c85d8f9baf","dockerRegistry":"ARTIFACT_REGISTRY"}]}
+[debug] [2023-01-04T23:13:18.530Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/nextjs-chris-hampshire/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-01-04T23:13:19.542Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/nextjs-chris-hampshire/locations/-/functions 200
+[debug] [2023-01-04T23:13:19.542Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/nextjs-chris-hampshire/locations/-/functions {"functions":[{"name":"projects/nextjs-chris-hampshire/locations/us-central1/functions/ssrnextjschrishampshire","buildConfig":{"build":"projects/1094999639492/locations/us-central1/builds/eda69ec5-df96-4e64-91cb-0ae29018f3f8","runtime":"nodejs18","entryPoint":"ssr","source":{"storageSource":{"bucket":"gcf-v2-sources-1094999639492-us-central1","object":"ssrnextjschrishampshire/function-source.zip"}},"sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-1094999639492-us-central1","object":"ssrnextjschrishampshire/function-source.zip","generation":"1672873279878907"}}},"serviceConfig":{"service":"projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire","timeoutSeconds":60,"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"nextjs-chris-hampshire\",\"appId\":\"1:1094999639492:web:3aa2b2fa4520b389145091\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\",\"apiKey\":\"AIzaSyAzu9VJLOySvINHVwGhsRQynUXp-uLt-UI\",\"authDomain\":\"nextjs-chris-hampshire.firebaseapp.com\",\"messagingSenderId\":\"1094999639492\",\"measurementId\":\"G-G872LRYGDD\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}","GCLOUD_PROJECT":"nextjs-chris-hampshire","EVENTARC_CLOUD_EVENT_SOURCE":"projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://ssrnextjschrishampshire-lcochqqctq-uc.a.run.app","serviceAccountEmail":"1094999639492-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssrnextjschrishampshire-00018-dim","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2023-01-04T23:05:37.214505843Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-nextjs-chris-hampshire","firebase-functions-hash":"2e09ff9d88aeff4d2cfd711bf53e6fcd832a37d8"},"environment":"GEN_2"}]}
+[debug] [2023-01-04T23:13:19.542Z] >>> [apiv2][query] GET https://run.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire [none]
+[debug] [2023-01-04T23:13:20.360Z] <<< [apiv2][status] GET https://run.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire 200
+[debug] [2023-01-04T23:13:20.361Z] <<< [apiv2][body] GET https://run.googleapis.com/v1/projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire {"apiVersion":"serving.knative.dev/v1","kind":"Service","metadata":{"name":"ssrnextjschrishampshire","namespace":"1094999639492","selfLink":"/apis/serving.knative.dev/v1/namespaces/1094999639492/services/ssrnextjschrishampshire","uid":"eb0372a4-8dd4-4aba-b4c1-8d78866b6fd8","resourceVersion":"AAXxeDiKpPk","generation":18,"labels":{"goog-managed-by":"cloudfunctions","goog-cloudfunctions-runtime":"nodejs18","cloud.googleapis.com/location":"us-central1"},"annotations":{"run.googleapis.com/client-name":"cli-firebase","serving.knative.dev/creator":"service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com","serving.knative.dev/lastModifier":"service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com","client.knative.dev/user-image":"us-central1-docker.pkg.dev/nextjs-chris-hampshire/gcf-artifacts/ssrnextjschrishampshire:version_1","cloudfunctions.googleapis.com/function-id":"ssrnextjschrishampshire","run.googleapis.com/ingress":"all","run.googleapis.com/ingress-status":"all"},"creationTimestamp":"2023-01-04T11:55:18.563725Z"},"spec":{"template":{"metadata":{"name":"ssrnextjschrishampshire-00018-dim","annotations":{"run.googleapis.com/client-name":"cli-firebase","cloudfunctions.googleapis.com/trigger-type":"HTTP_TRIGGER","client.knative.dev/user-image":"us-central1-docker.pkg.dev/nextjs-chris-hampshire/gcf-artifacts/ssrnextjschrishampshire:version_1","autoscaling.knative.dev/maxScale":"100","run.googleapis.com/cpu-throttling":"true","run.googleapis.com/startup-cpu-boost":"true"}},"spec":{"containerConcurrency":80,"timeoutSeconds":60,"serviceAccountName":"1094999639492-compute@developer.gserviceaccount.com","containers":[{"image":"us-central1-docker.pkg.dev/nextjs-chris-hampshire/gcf-artifacts/ssrnextjschrishampshire:version_1","env":[{"name":"__FIREBASE_FRAMEWORKS_ENTRY__","value":"next.js"},{"name":"__FIREBASE_DEFAULTS__","value":"{\"config\":{\"projectId\":\"nextjs-chris-hampshire\",\"appId\":\"1:1094999639492:web:3aa2b2fa4520b389145091\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\",\"apiKey\":\"AIzaSyAzu9VJLOySvINHVwGhsRQynUXp-uLt-UI\",\"authDomain\":\"nextjs-chris-hampshire.firebaseapp.com\",\"messagingSenderId\":\"1094999639492\",\"measurementId\":\"G-G872LRYGDD\"},\"_authTokenSyncURL\":\"/__session\"}"},{"name":"FIREBASE_CONFIG","value":"{\"projectId\":\"nextjs-chris-hampshire\",\"storageBucket\":\"nextjs-chris-hampshire.appspot.com\"}"},{"name":"GCLOUD_PROJECT","value":"nextjs-chris-hampshire"},{"name":"EVENTARC_CLOUD_EVENT_SOURCE","value":"projects/nextjs-chris-hampshire/locations/us-central1/services/ssrnextjschrishampshire"}],"resources":{"limits":{"cpu":"1","memory":"256Mi"}},"ports":[{"name":"http1","containerPort":8080}]}]}},"traffic":[{"percent":100,"latestRevision":true}]},"status":{"observedGeneration":18,"conditions":[{"type":"Ready","status":"True","lastTransitionTime":"2023-01-04T23:05:30.360927Z"},{"type":"ConfigurationsReady","status":"True","lastTransitionTime":"2023-01-04T23:05:24.302125Z"},{"type":"RoutesReady","status":"True","lastTransitionTime":"2023-01-04T23:05:30.533113Z"}],"latestReadyRevisionName":"ssrnextjschrishampshire-00018-dim","latestCreatedRevisionName":"ssrnextjschrishampshire-00018-dim","traffic":[{"revisionName":"ssrnextjschrishampshire-00018-dim","percent":100,"latestRevision":true}],"url":"https://ssrnextjschrishampshire-lcochqqctq-uc.a.run.app","address":{"url":"https://ssrnextjschrishampshire-lcochqqctq-uc.a.run.app"}}}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-01-04T23:13:20.368Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/run.googleapis.com [none]
+[debug] [2023-01-04T23:13:20.368Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/run.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T23:13:20.369Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/eventarc.googleapis.com [none]
+[debug] [2023-01-04T23:13:20.369Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/eventarc.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T23:13:20.370Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/pubsub.googleapis.com [none]
+[debug] [2023-01-04T23:13:20.370Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/pubsub.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T23:13:20.371Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/storage.googleapis.com [none]
+[debug] [2023-01-04T23:13:20.371Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/storage.googleapis.com x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T23:13:21.165Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/pubsub.googleapis.com 200
+[debug] [2023-01-04T23:13:21.165Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-01-04T23:13:21.212Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/eventarc.googleapis.com 200
+[debug] [2023-01-04T23:13:21.213Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2023-01-04T23:13:21.216Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/run.googleapis.com 200
+[debug] [2023-01-04T23:13:21.216Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[debug] [2023-01-04T23:13:21.217Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/storage.googleapis.com 200
+[debug] [2023-01-04T23:13:21.217Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nextjs-chris-hampshire/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-01-04T23:13:21.218Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1094999639492/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-01-04T23:13:21.219Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1094999639492/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-01-04T23:13:22.173Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1094999639492/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-01-04T23:13:22.173Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1094999639492/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1094999639492@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"108002506887950315675"}}
+[debug] [2023-01-04T23:13:22.174Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1094999639492/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-01-04T23:13:22.174Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1094999639492/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1094999639492@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"106548200010614569109"}}
+[debug] [2023-01-04T23:13:22.175Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire [none]
+[debug] [2023-01-04T23:13:22.451Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire 200
+[debug] [2023-01-04T23:13:22.451Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire {"projectId":"nextjs-chris-hampshire","projectNumber":"1094999639492","displayName":"nextjs-chris-hampshire","name":"projects/nextjs-chris-hampshire","resources":{"hostingSite":"nextjs-chris-hampshire"},"state":"ACTIVE","etag":"1_8ed5d22e-1a04-4fe2-9c2b-cacf8637abe8"}
+[debug] [2023-01-04T23:13:22.451Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire [none]
+[debug] [2023-01-04T23:13:22.709Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire 200
+[debug] [2023-01-04T23:13:22.709Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire {"projectId":"nextjs-chris-hampshire","projectNumber":"1094999639492","displayName":"nextjs-chris-hampshire","name":"projects/nextjs-chris-hampshire","resources":{"hostingSite":"nextjs-chris-hampshire"},"state":"ACTIVE","etag":"1_8ed5d22e-1a04-4fe2-9c2b-cacf8637abe8"}
+[debug] [2023-01-04T23:13:22.709Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire [none]
+[debug] [2023-01-04T23:13:22.955Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire 200
+[debug] [2023-01-04T23:13:22.955Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire {"projectId":"nextjs-chris-hampshire","projectNumber":"1094999639492","displayName":"nextjs-chris-hampshire","name":"projects/nextjs-chris-hampshire","resources":{"hostingSite":"nextjs-chris-hampshire"},"state":"ACTIVE","etag":"1_8ed5d22e-1a04-4fe2-9c2b-cacf8637abe8"}
+[debug] [2023-01-04T23:13:22.957Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/nextjs-chris-hampshire/versions [none]
+[debug] [2023-01-04T23:13:22.958Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/nextjs-chris-hampshire/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-01-04T23:13:24.032Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/nextjs-chris-hampshire/versions 200
+[debug] [2023-01-04T23:13:24.032Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/nextjs-chris-hampshire/versions {"name":"projects/1094999639492/sites/nextjs-chris-hampshire/versions/3aa8877489a902e4","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-01-04T23:13:24.033Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/nextjs-chris-hampshire/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-01-04T23:13:24.863Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/nextjs-chris-hampshire/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-01-04T23:13:24.863Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/nextjs-chris-hampshire/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-1094999639492-us-central1/a91ab98d-3222-43cf-b217-821117b5dad4.zip?GoogleAccessId=service-1094999639492@gcf-admin-robot.iam.gserviceaccount.com&Expires=1672875960&Signature=T1Pz5xHHYvZFxY3EKTj2iNnKPJuHShcav%2FmvvDq%2FoIf7BeACMc6HLy3rzHIeL6QbEzvE5lzAOjwcPhcRgyvbYRtmhM2IQlszKOORf7vxYEhu6cuov15IPkEGJPuQVpSo2KgdjnEsw5JWiioL6Tg6e%2Fi1%2B5NdcoVKrYEzar4%2FAXgEr4EVQbrqL4qRancK9mgJmXFvh4DKh4JBi4K5gMLPAcKZufRmrCm5K6mHLg%2BAHmpclc8kTF7xAumVNN078VpcFDCcnfE6ZH2FjCoIbJHOfCvA9KIPBH%2FCs8QVeAmgIEp0VVzqUISglz356DtvIR92OPE%2B72wfaPJNsr7zM0tugA%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-1094999639492-us-central1","object":"a91ab98d-3222-43cf-b217-821117b5dad4.zip"}}
+[debug] [2023-01-04T23:13:24.863Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-1094999639492-us-central1/a91ab98d-3222-43cf-b217-821117b5dad4.zip GoogleAccessId=service-1094999639492%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1672875960&Signature=T1Pz5xHHYvZFxY3EKTj2iNnKPJuHShcav%2FmvvDq%2FoIf7BeACMc6HLy3rzHIeL6QbEzvE5lzAOjwcPhcRgyvbYRtmhM2IQlszKOORf7vxYEhu6cuov15IPkEGJPuQVpSo2KgdjnEsw5JWiioL6Tg6e%2Fi1%2B5NdcoVKrYEzar4%2FAXgEr4EVQbrqL4qRancK9mgJmXFvh4DKh4JBi4K5gMLPAcKZufRmrCm5K6mHLg%2BAHmpclc8kTF7xAumVNN078VpcFDCcnfE6ZH2FjCoIbJHOfCvA9KIPBH%2FCs8QVeAmgIEp0VVzqUISglz356DtvIR92OPE%2B72wfaPJNsr7zM0tugA%3D%3D
+[debug] [2023-01-04T23:13:24.863Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-1094999639492-us-central1/a91ab98d-3222-43cf-b217-821117b5dad4.zip [stream]
+[debug] [2023-01-04T23:13:51.086Z] ----------------------------------------------------------------------
+[debug] [2023-01-04T23:13:51.087Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carl Wicker\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-01-04T23:13:51.088Z] CLI Version:   11.18.0
+[debug] [2023-01-04T23:13:51.088Z] Platform:      win32
+[debug] [2023-01-04T23:13:51.088Z] Node Version:  v18.12.1
+[debug] [2023-01-04T23:13:51.089Z] Time:          Wed Jan 04 2023 23:13:51 GMT+0000 (Greenwich Mean Time)
+[debug] [2023-01-04T23:13:51.089Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-04T23:13:51.145Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-04T23:13:51.145Z] > authorizing via signed-in user (carlwicker@gmail.com)
+[debug] [2023-01-04T23:13:51.146Z] [iam] checking project nextjs-chris-hampshire for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-04T23:13:51.148Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions [none]
+[debug] [2023-01-04T23:13:51.148Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions x-goog-quota-user=projects/nextjs-chris-hampshire
+[debug] [2023-01-04T23:13:51.148Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-04T23:13:51.828Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions 200
+[debug] [2023-01-04T23:13:51.829Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextjs-chris-hampshire:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-04T23:13:51.829Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-01-04T23:13:51.829Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-01-04T23:13:52.406Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-01-04T23:13:52.406Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextjs-chris-hampshire/serviceAccounts/nextjs-chris-hampshire@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-01-04T23:13:52.406Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire [none]
+[debug] [2023-01-04T23:13:52.653Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextjs-chris-hampshire 200

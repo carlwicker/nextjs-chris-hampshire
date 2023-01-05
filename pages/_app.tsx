@@ -16,8 +16,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Chris Hampshire: Home</title>
+        <title>Chris Hampshire | Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Chris Hampshire Home Page" />
         <meta charSet="utf-8" />
       </Head>
 

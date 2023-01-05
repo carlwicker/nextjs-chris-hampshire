@@ -23,7 +23,7 @@ export default function ContactPage(props: any) {
   }
 
   return (
-    <div data-scroll-section>
+    <div>
       <Head>
         <title>Chris Hampshire: Contact</title>
         <meta name="description" content="Chris Hampshire Contact Page" />
@@ -31,8 +31,8 @@ export default function ContactPage(props: any) {
       </Head>
 
       <div>
-        <main className={css.contact}>
-          <h1 className={css["contact-h1"]}>Contact</h1>
+        <main className="">
+          <h1 className="">Contact</h1>
           <form onSubmit={handleSubmit}>
             <label style={{ color: "white" }}>Email Address</label>
 

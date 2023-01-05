@@ -5,14 +5,16 @@ import Test from "../../components/Test";
 
 export default function DiscographyPage() {
   return (
-    <section id="discography">
+    <>
       <Head>
-        <title>Chris Hampshire: Discography</title>
-        <meta name="description" content="Chris Hampshire Discography" />
-        <link rel="icon" href="/favicon.png" />
+        <title>Chris Hampshire | Discography</title>
+        <meta name="description" content="Chris Hampshire | Discography" />
       </Head>
-      <Test />
-      <DiscographySection releases={releases} />
-    </section>
+
+      <section id="discography">
+        <Test />
+        <DiscographySection releases={releases} />
+      </section>
+    </>
   );
 }

@@ -9,7 +9,7 @@ export default async function handler(req: any, res: any) {
     jsonDirectory + "/biography.json",
     "utf8"
   );
-  console.log("Getting Biography Data");
+  console.log(JSON.parse(fileContents));
   //Return the content of the data file in json format
   res.status(200).json(JSON.parse(fileContents));
 }
