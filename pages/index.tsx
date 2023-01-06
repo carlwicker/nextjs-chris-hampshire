@@ -9,7 +9,7 @@ import { db } from "../firebase/clientApp";
 import { query, orderBy } from "firebase/firestore";
 import Head from "next/head";
 
-export default function Home({ biographyData }: any) {
+export default function Home({ biographyData, discographyData }: any) {
   return (
     <>
       <Head>
@@ -22,22 +22,30 @@ export default function Home({ biographyData }: any) {
         <ChrisImage />
         <BiographySection biographyData={biographyData} />
         <Test />
-        <DiscographySection releases={releases} />
+        <DiscographySection discographyData={discographyData} />
       </div>
     </>
   );
 }
 
 export async function getServerSideProps(context: any) {
-  const querySnapshot = await getDocs(
+  const querySnapshotBio = await getDocs(
     query(collection(db, "biography"), orderBy("index"))
   );
   let biographyData: any = [];
-  querySnapshot.forEach((doc) => {
+  querySnapshotBio.forEach((doc) => {
     biographyData.push(doc.data());
   });
 
+  const querySnapshotDiscog = await getDocs(
+    query(collection(db, "discography"), orderBy("index"))
+  );
+  let discographyData: any = [];
+  querySnapshotDiscog.forEach((doc) => {
+    discographyData.push(doc.data());
+  });
+
   return {
-    props: { biographyData },
+    props: { biographyData, discographyData },
   };
 }

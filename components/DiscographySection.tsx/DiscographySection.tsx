@@ -1,24 +1,11 @@
 import ReleaseItem from "./ReleaseItem";
+import { useEffect } from "react";
 
-interface IDiscographySection {
-  releases: IRelease[];
-}
+export default function DiscographySection({ discographyData }: any) {
+  useEffect(() => {
+    console.log(discographyData);
+  }, []);
 
-interface IRelease {
-  catNum: string;
-  label: string;
-  title: string;
-  artist: string;
-  links: ILinks;
-}
-
-interface ILinks {
-  beatport: string;
-  recoverworldCatLink: string;
-  recoverWorldLabelLink: string;
-}
-
-export default function DiscographySection({ releases }: IDiscographySection) {
   return (
     <div className="container mx-auto w-full text-xl font-normal py-40">
       <h1
@@ -30,7 +17,7 @@ export default function DiscographySection({ releases }: IDiscographySection) {
       </h1>
 
       <div>
-        {releases?.map((release: IRelease, index: number) => (
+        {discographyData?.map((release: any, index: number) => (
           <ReleaseItem release={release} index={index} key={index} />
         ))}
       </div>

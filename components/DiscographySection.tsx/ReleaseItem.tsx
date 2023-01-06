@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useEffect } from "react";
 
 interface IRelease {
   release: any;
@@ -6,6 +7,10 @@ interface IRelease {
 }
 
 export default function ReleaseItem({ release, index }: IRelease) {
+  useEffect(() => {
+    console.log(release);
+  }, []);
+
   return (
     <div
       className={`flex flex-col gap-1 ${
@@ -15,7 +20,7 @@ export default function ReleaseItem({ release, index }: IRelease) {
       <div data-scroll data-scroll-speed="2">
         <div className="text-sm">
           <a
-            href={release?.links.recoverworldCatLink}
+            href={`https://recoverworld.com/digital/${release.catNum}`}
             target="_blank"
             rel="noreferrer"
             className="hover:text-red-500 text-white transition ease-in duration-200"
@@ -24,7 +29,7 @@ export default function ReleaseItem({ release, index }: IRelease) {
           </a>{" "}
           |{" "}
           <a
-            href={release?.links.recoverWorldLabelLink}
+            href={release?.labelUrl}
             className="hover:text-red-500 text-white transition ease-in duration-200"
           >
             {release.label}
@@ -36,7 +41,7 @@ export default function ReleaseItem({ release, index }: IRelease) {
         <div className="">{release.artist}</div>
         <br />
         <Link
-          href={release?.links.beatport}
+          href={release?.beatport}
           target="_blank"
           className="hover:text-red-500 text-white transition ease-in duration-200"
         >
