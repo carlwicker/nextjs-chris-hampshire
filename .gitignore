@@ -20,6 +20,7 @@
 *.pem
 .npmrc
 ui-debug.log
+/y/
 
 # debug
 npm-debug.log*
