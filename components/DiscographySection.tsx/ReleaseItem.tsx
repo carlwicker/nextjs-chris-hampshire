@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useEffect } from "react";
 
 interface IRelease {
   release: any;
@@ -7,10 +6,6 @@ interface IRelease {
 }
 
 export default function ReleaseItem({ release, index }: IRelease) {
-  useEffect(() => {
-    console.log(release);
-  }, []);
-
   return (
     <div
       className={`flex flex-col gap-1 ${

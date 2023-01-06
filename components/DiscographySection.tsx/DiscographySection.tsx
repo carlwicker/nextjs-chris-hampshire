@@ -1,11 +1,6 @@
 import ReleaseItem from "./ReleaseItem";
-import { useEffect } from "react";
 
 export default function DiscographySection({ discographyData }: any) {
-  useEffect(() => {
-    console.log(discographyData);
-  }, []);
-
   return (
     <div className="container mx-auto w-full text-xl font-normal py-40">
       <h1

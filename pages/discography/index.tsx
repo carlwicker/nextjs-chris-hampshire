@@ -2,8 +2,11 @@ import Head from "next/head";
 import releases from "../../json/releases.json";
 import DiscographySection from "../../components/DiscographySection.tsx/DiscographySection";
 import Test from "../../components/Test";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/clientApp";
+import { query, orderBy } from "firebase/firestore";
 
-export default function DiscographyPage() {
+export default function DiscographyPage({ discographyData }: any) {
   return (
     <>
       <Head>
@@ -13,8 +16,22 @@ export default function DiscographyPage() {
 
       <section id="discography">
         <Test />
-        <DiscographySection releases={releases} />
+        <DiscographySection discographyData={discographyData} />
       </section>
     </>
   );
+}
+
+export async function getServerSideProps(context: any) {
+  const querySnapshotDiscog = await getDocs(
+    query(collection(db, "discography"), orderBy("index"))
+  );
+  let discographyData: any = [];
+  querySnapshotDiscog.forEach((doc) => {
+    discographyData.push(doc.data());
+  });
+
+  return {
+    props: { discographyData },
+  };
 }
