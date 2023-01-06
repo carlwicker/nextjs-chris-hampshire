@@ -35,9 +35,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         options={{
           smooth: true,
           inertia: 0.5,
-          mobile: { smooth: true },
-          tablet: { smooth: true },
-          smartphone: { smooth: true },
+          mobile: { smooth: true, breakpoint: 0 },
+          tablet: { smooth: true, breakpoint: 0 },
+          smartphone: { smooth: true, breakpoint: 0 },
         }}
         watch={[]}
         location={asPath}
