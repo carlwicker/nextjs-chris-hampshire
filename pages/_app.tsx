@@ -2,16 +2,21 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import TopNav from "../components/TopNav/TopNav";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import FooterSection from "../components/Footer/FooterSection";
+import Router from "next/router";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();
   const containerRef = useRef(null);
 
   const router = useRouter();
+
+  useEffect(() => {
+    window.dispatchEvent(new Event("resize"));
+  }, [Component]);
 
   return (
     <>
@@ -37,6 +42,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         watch={[]}
         location={asPath}
         containerRef={containerRef}
+        onLocationChange={(scroll: any) =>
+          scroll.scrollTo(0, { duration: 0, disableLerp: true })
+        }
       >
         <div data-scroll-container ref={containerRef}>
           <div className="p-5">
