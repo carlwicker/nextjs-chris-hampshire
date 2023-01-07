@@ -4,7 +4,7 @@ export default function TopNav() {
   return (
     <div
       data-scroll-sticky
-      className="flex pt-5 sticky z-50 text-sm font-medium"
+      className="flex pt-5 sticky z-50 text-sm font-medium px-5 sm:px-0"
     >
       <div className="flex justify-between w-full z-50" id="nav">
         <div>
