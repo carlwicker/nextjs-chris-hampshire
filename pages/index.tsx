@@ -16,7 +16,7 @@ export default function Home({ biographyData, discographyData }: any) {
         <meta name="description" content="Chris Hampshire Home Page" />
       </Head>
 
-      <div>
+      <>
         <div id="top">
           <HeroSection />
           <ChrisImage />
@@ -28,7 +28,7 @@ export default function Home({ biographyData, discographyData }: any) {
           <Test />
           <DiscographySection discographyData={discographyData} />
         </div>
-      </div>
+      </>
     </>
   );
 }

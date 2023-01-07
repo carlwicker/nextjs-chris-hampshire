@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             data-scroll
             data-scroll-sticky
             data-scroll-target="#scroll-container"
-            className="pb-5 align-center sticky top-0 justify-center w-full bg-[#111] z-50"
+            className="pb-5 align-center sticky top-0 justify-center w-full bg-black z-50"
           >
             <div className="container mx-auto ">
               <TopNav />
