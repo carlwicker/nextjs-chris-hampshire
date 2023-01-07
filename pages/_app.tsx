@@ -27,10 +27,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta charSet="utf-8" />
       </Head>
 
-      <div className="flex absolute top-0 self-center justify-center w-full">
-        <TopNav />
-      </div>
-
       <LocomotiveScrollProvider
         options={{
           smooth: true,
@@ -41,12 +37,24 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
         watch={[]}
         location={asPath}
+        lerp={0.03}
+        multiplier={1.2}
         containerRef={containerRef}
         onLocationChange={(scroll: any) =>
           scroll.scrollTo(0, { duration: 0, disableLerp: true })
         }
       >
-        <div data-scroll-container ref={containerRef}>
+        <div data-scroll-container ref={containerRef} id="scroll-container">
+          <div
+            data-scroll
+            data-scroll-sticky
+            data-scroll-target="#scroll-container"
+            className="pb-5 align-center sticky top-0 justify-center w-full bg-[#111] z-50"
+          >
+            <div className="container mx-auto ">
+              <TopNav />
+            </div>
+          </div>
           <div className="p-5">
             <Component {...pageProps} />
           </div>

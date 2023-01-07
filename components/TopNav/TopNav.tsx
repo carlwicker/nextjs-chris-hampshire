@@ -2,33 +2,39 @@ import Link from "next/link";
 
 export default function TopNav() {
   return (
-    <div className="pt-5 flex z-50 container mx-auto font-semibold uppercase text-sm">
-      <div className="flex justify-between w-full">
-        <div className="bg-black p-2">
-          <Link
-            href="/"
+    <div
+      data-scroll-sticky
+      className="flex pt-5 sticky z-50 text-sm font-medium"
+    >
+      <div className="flex justify-between w-full z-50" id="nav">
+        <div>
+          <a
+            href="#top"
+            data-scroll-to
             className="hover:text-red-500 text-white transition ease-in duration-200 normal-case"
           >
             Chris Hampshire
-          </Link>
+          </a>
         </div>
 
-        <nav className="flex gap-2">
-          <div className="bg-black p-2 ">
-            <Link
-              href="/biography"
+        <nav className="flex gap-5">
+          <div>
+            <a
+              href="#biography"
+              data-scroll-to
               className="hover:text-red-500 text-white transition ease-in duration-200 normal-case"
             >
               Biography
-            </Link>
+            </a>
           </div>
-          <div className="bg-black p-2">
-            <Link
-              href="/discography"
+          <div>
+            <a
+              href="#discography"
+              data-scroll-to
               className="hover:text-red-500 text-white transition ease-in duration-200 normal-case"
             >
               Discography
-            </Link>
+            </a>
           </div>
           {/* <div className="bg-black p-2 ">
             <Link href="/contact">Contact</Link>

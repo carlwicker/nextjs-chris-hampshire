@@ -14,7 +14,6 @@ export default function BiographyPage({ biographyData }: any) {
       </Head>
 
       <Test />
-
       <BiographySection biographyData={biographyData} />
     </>
   );

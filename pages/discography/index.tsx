@@ -1,10 +1,10 @@
 import Head from "next/head";
-import releases from "../../json/releases.json";
 import DiscographySection from "../../components/DiscographySection.tsx/DiscographySection";
 import Test from "../../components/Test";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/clientApp";
 import { query, orderBy } from "firebase/firestore";
+import { NextApiHandler } from "next";
 
 export default function DiscographyPage({ discographyData }: any) {
   return (
@@ -14,10 +14,8 @@ export default function DiscographyPage({ discographyData }: any) {
         <meta name="description" content="Chris Hampshire | Discography" />
       </Head>
 
-      <section id="discography">
-        <Test />
-        <DiscographySection discographyData={discographyData} />
-      </section>
+      <Test />
+      <DiscographySection discographyData={discographyData} />
     </>
   );
 }

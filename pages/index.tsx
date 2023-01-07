@@ -17,11 +17,17 @@ export default function Home({ biographyData, discographyData }: any) {
       </Head>
 
       <div>
-        <HeroSection />
-        <ChrisImage />
-        <BiographySection biographyData={biographyData} />
-        <Test />
-        <DiscographySection discographyData={discographyData} />
+        <div id="top">
+          <HeroSection />
+          <ChrisImage />
+        </div>
+        <div id="biography">
+          <BiographySection biographyData={biographyData} />
+        </div>
+        <div id="discography">
+          <Test />
+          <DiscographySection discographyData={discographyData} />
+        </div>
       </div>
     </>
   );
