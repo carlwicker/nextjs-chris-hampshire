@@ -9,8 +9,8 @@ export default function ReleaseItem({ release, index }: IRelease) {
   return (
     <div
       className={`flex flex-col gap-1 ${
-        index === 5 ? "border-b-[px]" : "border-b-[1px]"
-      } border-[#333] py-40`}
+        index === 5 ? "border-b-[0px] pt-40" : "border-b-[1px] py-40"
+      } border-[#333]`}
     >
       <div data-scroll data-scroll-speed="2">
         <div className="text-sm">
