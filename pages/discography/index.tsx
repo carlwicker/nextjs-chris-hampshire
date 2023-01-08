@@ -14,7 +14,6 @@ export default function DiscographyPage({ discographyData }: any) {
         <meta name="description" content="Chris Hampshire | Discography" />
       </Head>
 
-      <Test />
       <DiscographySection discographyData={discographyData} />
     </>
   );

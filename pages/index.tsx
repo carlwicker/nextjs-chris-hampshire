@@ -25,7 +25,6 @@ export default function Home({ biographyData, discographyData }: any) {
           <BiographySection biographyData={biographyData} />
         </div>
         <div id="discography">
-          <Test />
           <DiscographySection discographyData={discographyData} />
         </div>
       </>
