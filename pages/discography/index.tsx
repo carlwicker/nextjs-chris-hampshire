@@ -1,10 +1,8 @@
 import Head from "next/head";
 import DiscographySection from "../../components/DiscographySection.tsx/DiscographySection";
-import Test from "../../components/Test";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/clientApp";
 import { query, orderBy } from "firebase/firestore";
-import { NextApiHandler } from "next";
 
 export default function DiscographyPage({ discographyData }: any) {
   return (
@@ -25,7 +23,7 @@ export async function getServerSideProps(context: any) {
   );
   let discographyData: any = [];
   querySnapshotDiscog.forEach((doc) => {
-    discographyData.push(doc.data());
+    discographyData.unshift(doc.data());
   });
 
   return {

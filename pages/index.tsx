@@ -42,7 +42,7 @@ export async function getServerSideProps(context: any) {
   });
 
   const querySnapshotDiscog = await getDocs(
-    query(collection(db, "discography"), orderBy("index"))
+    query(collection(db, "discography"), orderBy("index", "desc"))
   );
   let discographyData: any = [];
   querySnapshotDiscog.forEach((doc) => {

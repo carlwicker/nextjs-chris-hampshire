@@ -9,7 +9,7 @@ export default function ReleaseItem({ release, index }: IRelease) {
   return (
     <div
       className={`flex flex-col gap-1 ${
-        index === 5 ? "border-b-[0px] pt-20" : "border-b-[1px] py-20"
+        index === 9 ? "border-b-[0px] pt-20" : "border-b-[1px] py-20"
       } border-[#333]`}
     >
       <div data-scroll data-scroll-speed="2">
@@ -41,6 +41,14 @@ export default function ReleaseItem({ release, index }: IRelease) {
           className="hover:text-red-500 text-white transition ease-in duration-200"
         >
           Purchase on Beatport
+        </Link>
+        <br />
+        <Link
+          href={release?.spotify}
+          target="_blank"
+          className="hover:text-red-500 text-white transition ease-in duration-200"
+        >
+          Listen on Spotify
         </Link>
       </div>
     </div>
